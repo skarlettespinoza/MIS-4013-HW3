@@ -1,4 +1,4 @@
-<h1>Courses by Instructor</h1>
+<h1>Courses</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -6,15 +6,14 @@
       <th>ID</th>
       <th>Course Number</th>
       <th>Description</th> 
-      <th>Semester</th> 
-      <th>Room</th> 
-      <th>Day Time</th> 
-        <th></th>
+      <th>Semester</th>
+      <th>Room</th>
+      <th>Day Time</th>
       </tr>
     </thead>
     <tbody>
 <?php
-while($courses=$courses->fetch_assoc()){
+while($course=$courses->fetch_assoc()){
 ?>
   <tr>
     <td><?php echo $course["course_id"];?></td> 
