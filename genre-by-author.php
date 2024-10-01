@@ -4,7 +4,7 @@ require_once("model-genres-by-author.php");
 
 $pageTitle="Genres by Author";
 include "view-header.php";
-$courses = selectGenresByAuthor($_GET['id']);
+$genres = selectGenresByAuthor($_GET['id']);
 include "view-genres-by-author.php";
 include "view-footer.php";
 ?>
