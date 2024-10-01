@@ -26,7 +26,7 @@
                 <a class="nav-link" href="courses.php">Courses</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="instructor-with-courses.php">Instructors with courses</a>
+                <a class="nav-link" href="instructors-with-courses.php">Instructors with courses</a>
               </li>
             </ul>
           </div>
