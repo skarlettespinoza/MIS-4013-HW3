@@ -12,7 +12,7 @@ while($author=$authors->fetch_assoc()){
   $courses = selectGenresByAuthor($author["author_id"]);
   while ($genre =  $genres->fetch_assoc()){
 ?>
-    <li class="list-group-item"><?php echo $genre["genre"];?> - <?php echo $genre["title"];?> - <?php echo $genre["publication_date"];?></li>
+    <li class="list-group-item"><?php echo $genre["genre"];?> - <?php echo $genre["title"];?> - <?php echo $genre["book_series"];?> - <?php echo $genre["publication_date"];?></li>
 <?php
   }
 ?>
