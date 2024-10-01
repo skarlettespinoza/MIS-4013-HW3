@@ -1,10 +1,10 @@
 <?php
 require_once("util-db.php");
-require_once("model-sections-by-course.php");
+require_once("model-books-by-genre.php");
 
-$pageTitle="Sections by Course";
+$pageTitle="Books by Genre";
 include "view-header.php";
-$sections = selectSectionsByCourse($_POST['cid']);
-include "view-sections-by-course.php";
+$books = selectBooksByGenre($_POST['gid']);
+include "view-books-by-genre.php";
 include "view-footer.php";
 ?>
