@@ -1,10 +1,10 @@
 <?php
 require_once("util-db.php");
-require_once("model-instructors-with-courses.php");
+require_once("model-authors-with-genres.php");
 
-$pageTitle="Instructors with Courses";
+$pageTitle="Authors with Genres";
 include "view-header.php";
-$instructors = selectInstructors();
-include "view-instructors-with-courses.php";
+$instructors = selectAuthors();
+include "view-authors-with-genres.php";
 include "view-footer.php";
 ?>
