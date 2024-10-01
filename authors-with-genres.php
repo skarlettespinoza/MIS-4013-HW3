@@ -4,7 +4,7 @@ require_once("model-authors-with-genres.php");
 
 $pageTitle="Authors with Genres";
 include "view-header.php";
-$instructors = selectAuthors();
+$authors = selectAuthors();
 include "view-authors-with-genres.php";
 include "view-footer.php";
 ?>
