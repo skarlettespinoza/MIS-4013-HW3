@@ -9,7 +9,7 @@ while($author=$authors->fetch_assoc()){
       <p class="card-text">
       <ul class="list-group">
 <?php
-  $courses = selectGenresByAuthor($author["author_id"]);
+  $genres = selectGenresByAuthor($author["author_id"]);
   while ($genre =  $genres->fetch_assoc()){
 ?>
     <li class="list-group-item"><?php echo $genre["genre"];?> - <?php echo $genre["title"];?> - <?php echo $genre["book_series"];?> - <?php echo $genre["publication_date"];?></li>
