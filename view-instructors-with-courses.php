@@ -1,7 +1,7 @@
 <h1>Instructors with courses</h1>
 <div class="card-group">
 <?php
-while($instructor=$instructors->fetch_assoc()){
+while($instructor = $instructors->fetch_assoc()){
 ?>
   <div class="card">
     <div class="card-body">
