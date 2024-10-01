@@ -20,10 +20,10 @@
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="instructors.php">Authors</a>
+                <a class="nav-link" href="authors.php">Authors</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="courses.php">Courses</a>
+                <a class="nav-link" href="genres.php">Genres</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="instructors-with-courses.php">Instructors with courses</a>
