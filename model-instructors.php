@@ -1,8 +1,8 @@
 <?php
-function selectInstructors() {
+function selectAuthors() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT instructor_id, instructor_name, office_number FROM `instructor`");
+        $stmt = $conn->prepare("SELECT author_id, author_name, publisher_name FROM `author`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
