@@ -1,4 +1,4 @@
-<h1>Gneres</h1>
+<h1>Genres</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
