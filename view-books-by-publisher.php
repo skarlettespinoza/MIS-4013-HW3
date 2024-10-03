@@ -5,6 +5,7 @@
       <tr>
       <th>ID</th>
       <th>Publishing Company</th>
+      <th>Headquarters</th>
       <th>Title</th>
       <th>Book Series</th>
       <th>Publication Date</th>
@@ -17,6 +18,7 @@ while($book=$books->fetch_assoc()){
   <tr>
     <td><?php echo $book["publisher_id"];?></td> 
     <td><?php echo $book["publisher_name"];?></td>
+    <td><?php echo $book["location"];?></td>
     <td><?php echo $book["title"];?></td>
     <td><?php echo $book["book_series"];?></td>
     <td><?php echo $book["publication_date"];?></td>
