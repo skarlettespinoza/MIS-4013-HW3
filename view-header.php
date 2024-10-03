@@ -26,6 +26,9 @@
                 <a class="nav-link" href="genres.php">Genres</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="publishers.php">Publishers</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="authors-with-genres.php">Authors with genres</a>
               </li>
             </ul>
