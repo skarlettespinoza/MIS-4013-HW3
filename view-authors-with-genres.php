@@ -1,4 +1,4 @@
-<h1>Authors with genres</h1>
+<h1>Author's books with genres</h1>
 <div class="card-group">
 <?php
 while($author=$authors->fetch_assoc()){
