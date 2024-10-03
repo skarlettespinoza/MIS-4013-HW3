@@ -18,9 +18,9 @@ while($publisher=$publishers->fetch_assoc()){
     <td><?php echo $publisher["publisher_name"];?></td>
     <td><?php echo $publisher["location"];?></td>
     <td>
-      <form method="post" action="authors-by-publisher.php">
+      <form method="post" action="books-by-publisher.php">
         <input type="hidden" name="pid" value="<?php echo $publisher["publisher_id"];?>">
-        <button type="submit" class="btn btn-primary">Authors</button>
+        <button type="submit" class="btn btn-primary">Books</button>
       </form>
     </td>
   </tr>
