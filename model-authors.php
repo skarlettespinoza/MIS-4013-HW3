@@ -2,7 +2,7 @@
 function selectAuthors() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT author_id, author_name, publisher_name FROM `author`");
+        $stmt = $conn->prepare("SELECT author_id, author_name, author_birthdate, author_age FROM `author`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
