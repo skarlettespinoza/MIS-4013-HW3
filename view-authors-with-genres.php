@@ -18,7 +18,7 @@ while($author=$authors->fetch_assoc()){
 ?>
       </ul>
       </p>
-      <p class="card-text"><small class="text-body-secondary">Publisher: <?php echo $author["author_birthdate"];?></small></p>
+      <p class="card-text"><small class="text-body-secondary">Author Birthdate: <?php echo $author["author_birthdate"];?></small></p>
     </div>
   </div>
 <?php
