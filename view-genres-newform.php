@@ -20,6 +20,7 @@
             <label for="gGen" class="form-label">Genre</label>
             <input type="text" class="form-control" id="gGen" name="gGen">
           </div>
+            <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
