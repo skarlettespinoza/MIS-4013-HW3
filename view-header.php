@@ -31,6 +31,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="authors-with-genres.php">Authors with genres</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="books.php">Books</a>
+              </li>
             </ul>
           </div>
         </div>
