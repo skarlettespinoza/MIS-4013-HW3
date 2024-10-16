@@ -6,8 +6,8 @@
       <th>ID</th>
       <th>Author</th>
       <th>Genre</th>
-      <th>Title</th> 
       <th>Publisher</th>
+      <th>Title</th> 
       <th>Book Series</th>
       <th>Publication Date</th>
         <th></th>
