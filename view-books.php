@@ -4,9 +4,6 @@
     <thead>
       <tr>
       <th>ID</th>
-      <th>Author</th>
-      <th>Genre</th>
-      <th>Publisher</th>
       <th>Title</th> 
       <th>Book Series</th>
       <th>Publication Date</th>
@@ -19,9 +16,6 @@ while($book=$books->fetch_assoc()){
 ?>
   <tr>
     <td><?php echo $book["book_id"];?></td> 
-    <td><?php echo $book["author_id"];?></td>
-    <td><?php echo $book["genre_id"];?></td>
-    <td><?php echo $book["publisher_id"];?></td>
     <td><?php echo $book["title"];?></td>
     <td><?php echo $book["book_series"];?></td>
     <td><?php echo $book["publication_date"];?></td>
