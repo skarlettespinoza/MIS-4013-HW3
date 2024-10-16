@@ -14,6 +14,13 @@ if (isset($_POST['actionType'])){
         echo '<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
+        case "Delete":
+      if(deleteGenres($_POST['gid'])){
+        echo '<div class="alert alert-success" role="alert">Genre deleted</div>';
+      } else {
+        echo '<div class="alert alert-danger" role="alert">Error</div>';
+      }
+      break;
   }
 }
 
