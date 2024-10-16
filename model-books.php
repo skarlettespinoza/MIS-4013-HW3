@@ -2,7 +2,7 @@
 function selectBooks() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT book_id, author_id, genre_id, publisher_id title, book_series, publication_date FROM `book`");
+        $stmt = $conn->prepare("SELECT book_id, author_id, genre_id, publisher_id, title, book_series, publication_date FROM `book`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
