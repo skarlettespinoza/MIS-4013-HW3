@@ -7,6 +7,7 @@
       <th>Author</th>
       <th>Genre</th>
       <th>Title</th> 
+      <th>Publisher</th>
       <th>Book Series</th>
       <th>Publication Date</th>
         <th></th>
@@ -20,10 +21,10 @@ while($book=$books->fetch_assoc()){
     <td><?php echo $book["book_id"];?></td> 
     <td><?php echo $book["author_id"];?></td>
     <td><?php echo $book["genre_id"];?></td>
+    <td><?php echo $book["publisher_id"];?></td>
     <td><?php echo $book["title"];?></td>
     <td><?php echo $book["book_series"];?></td>
     <td><?php echo $book["publication_date"];?></td>
-    <td><a href="publisher-by-book.php?id=<?php echo $book["book_id"];?>">Publisher</a></td>
   </tr>
 <?php
 }
