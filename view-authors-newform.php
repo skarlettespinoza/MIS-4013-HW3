@@ -20,14 +20,15 @@
             <label for="aName" class="form-label">Author name</label>
             <input type="text" class="form-control" id="aName" name="aName">
           </div>
-        <div class="mb-3">
+          <div class="mb-3">
             <label for="aBirthdate" class="form-label">Author birthdate</label>
             <input type="text" class="form-control" id="aBirthdate" name="aBirthdate">
           </div>
-        <div class="mb-3">
+          <div class="mb-3">
             <label for="aAge" class="form-label">Author age</label>
             <input type="number" class="form-control" id="aAge" name="aAge">
-        </div>
+          </div>
+            <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
