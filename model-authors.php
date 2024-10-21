@@ -44,7 +44,7 @@ function updateAuthors($aName, $aBirthdate, $aAge, $aid) {
 function deleteAuthors($aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete `author` where author_id=?");
+        $stmt = $conn->prepare("delete from author where author_id=?");
         $stmt->bind_param("i", $aid);
         $success = $stmt->execute();
         $conn->close();
