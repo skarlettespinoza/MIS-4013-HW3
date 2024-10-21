@@ -33,6 +33,7 @@ while($author=$authors->fetch_assoc()){
     <td>
 
     </td>
+    <td>
       <form method="post" action="">
         <input type="hidden" name="aid" value="<?php echo $author["author_id"];?>">
         <input type="hidden" name="actionType" value="Delete">
@@ -42,7 +43,6 @@ while($author=$authors->fetch_assoc()){
           </svg>
         </button>
       </form>
-    <td>
     </td>
     <td><a href="genre-by-author.php?id=<?php echo $author["author_id"];?>">Genre</a></td>
   </tr>
