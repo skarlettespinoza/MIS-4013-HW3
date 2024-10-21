@@ -15,7 +15,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="post" action="">
           <div class="mb-3">
             <label for="aName" class="form-label">Author name</label>
             <input type="text" class="form-control" id="aName" name="aName">
@@ -28,7 +28,7 @@
             <label for="aAge" class="form-label">Author age</label>
             <input type="number" class="form-control" id="aAge" name="aAge">
         </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
     </div>
