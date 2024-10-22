@@ -24,6 +24,7 @@
             <label for="pLoc" class="form-label">Location</label>
             <input type="text" class="form-control" id="pLoc" name="pLoc">
           </div>
+            <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
