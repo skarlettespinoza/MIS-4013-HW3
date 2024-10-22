@@ -16,6 +16,8 @@ include "view-publishers-newform.php";
       <th>Publishing Company</th>
       <th>Headquarters</th>
         <th></th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
