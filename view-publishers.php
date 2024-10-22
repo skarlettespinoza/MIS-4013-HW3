@@ -29,7 +29,9 @@ while($publisher=$publishers->fetch_assoc()){
     <td><?php echo $publisher["publisher_name"];?></td>
     <td><?php echo $publisher["location"];?></td>
     <td>
-      
+<?php
+include "view-publishers-editform.php";
+?>      
     </td>
     <td>
       <form method="post" action="">
