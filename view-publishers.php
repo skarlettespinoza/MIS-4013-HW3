@@ -1,13 +1,4 @@
-<div class="row">
-  <div class="col"
 <h1>Publishers</h1>
-  </div>
-  <div class="col-auto">
-<?php
-include "view-publishers-newform.php";
-?>
-  </div>
-</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -15,8 +6,6 @@ include "view-publishers-newform.php";
       <th>ID</th>
       <th>Publishing Company</th>
       <th>Headquarters</th>
-        <th></th>
-        <th></th>
         <th></th>
       </tr>
     </thead>
