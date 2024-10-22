@@ -14,6 +14,13 @@ if (isset($_POST['actionType'])){
         echo '<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
+    case "Delete":
+      if(deletePublishers($_POST['pid'])){
+        echo '<div class="alert alert-success" role="alert">Publisher deleted</div>';
+      } else{
+        echo '<div class="alert alert-danger" role="alert">Error</div>';
+      }
+      break;
   }
 }
 $publishers = selectPublishers();
