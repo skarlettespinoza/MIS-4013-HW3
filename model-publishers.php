@@ -16,7 +16,7 @@ function selectPublishers() {
 function insertPublishers($pName, $pLoc) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `publisher` (`publisher_name, `location`) VALUES (?,?)");
+        $stmt = $conn->prepare("INSERT INTO `publisher` (`publisher_name`, `location`) VALUES (?,?)");
         $stmt->bind_param("ss", $pName, $pLoc);
         $success = $stmt->execute();
         $conn->close();
