@@ -1,4 +1,13 @@
+<div class="row">
+  <div class="col">
 <h1>Author's books with genres</h1>
+  </div>
+  <div class="col-auto">  
+<?php
+include "view-authors-with-genres-newform.php";
+?>
+  </div>
+</div>  
 <div class="card-group">
 <?php
 while($author=$authors->fetch_assoc()){
