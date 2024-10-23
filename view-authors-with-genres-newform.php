@@ -39,7 +39,8 @@
           <div class="mb-3">
             <label for="publication_date" class="form-label">Publication Date</label>
             <input type="text" class="form-control" id="publication_date" name="publication_date">
-          </div>          
+          </div>   
+            <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
