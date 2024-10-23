@@ -19,7 +19,7 @@
           <div class="mb-3">
             <label for="iid" class="form-label">Author</label>
 <?php
-$authorList = selectAuthorsForInput();
+$authorsList = selectAuthorsForInput();
 include "view-authors-input-list.php"
 ?>
           </div>
