@@ -24,7 +24,7 @@ while($author=$authors->fetch_assoc()){
     <li class="list-group-item"><?php echo $genre["genre"];?> - <?php echo $genre["title"];?> - <?php echo $genre["book_series"];?> - <?php echo $genre["publication_date"];?></li>
 
     <li class="list-group-item">
-      <?php include "view-actors-with-shows-editform.php";?>
+      <?php include "view-authors-with-genres-editform.php";?>
     </li>
     <li class="list-group-item">
       <form method="post" action="">
