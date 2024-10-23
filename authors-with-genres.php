@@ -8,14 +8,14 @@ include "view-header.php";
 if (isset($_POST['actionType'])){
   switch ($_POST['actionType']) {
     case "Add":
-      if(insertBooks($_POST['iid'],$_POST['gid'],$_POST['pid'],$_POST['title'],$_POST['book_series'],$_POST['publication_date'],$_POST['bid'])) {
+      if(insertBooks($_POST['iid'],$_POST['gid'],$_POST['pid'],$_POST['title'],$_POST['book_series'],$_POST['publication_date'])) {
         echo'<div class="alert alert-success" role="alert">Book added</div>';
       } else {
         echo'<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
     case "Edit":
-      if(updateBooks($_POST['iid'],$_POST['gid'],$_POST['pid'],$_POST['title'],$_POST['book_series'],$_POST['publication_date'])) {
+      if(updateBooks($_POST['iid'],$_POST['gid'],$_POST['pid'],$_POST['title'],$_POST['book_series'],$_POST['publication_date'],$_POST['bid'])) {
         echo'<div class="alert alert-success" role="alert">Book edited</div>';
       } else {
         echo'<div class="alert alert-danger" role="alert">Error</div>';
