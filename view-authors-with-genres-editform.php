@@ -39,8 +39,9 @@
           <div class="mb-3">
             <label for="publication_date<?php echo $book['book_id'];?>" class="form-label">Publication Date</label>
             <input type="text" class="form-control" id="publication_date<?php echo $book['book_id'];?>" name="publication_date" value="<?php echo $book['publication_date'];?>">
-          </div>   
-            <input type="hidden" name="actionType" value="Add">
+          </div>
+            <input type="hidden" name="bid" value="<?php echo $book['book_id'];?>">
+            <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
