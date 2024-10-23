@@ -27,6 +27,48 @@ function selectGenresByAuthor($iid) {
     }
 }
 
+function selectAuthorsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT author_id, author_name FROM `author` order by author_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectGenresForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT genre_id, genre FROM `genre` order by genre");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectPublishersForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT publisher_id, publisher_name FROM `publisher` order by publisher_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 function insertBooks($iid, $gid, $pid, $title, $book_series, $publication_date){
     try {
         $conn = get_db_connection();
