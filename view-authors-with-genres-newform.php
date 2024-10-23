@@ -18,7 +18,10 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="iid" class="form-label">Author</label>
-            <input type="number" class="form-control" id="iid" name="iid">
+<?php
+$authorList = selectAuthorsForInput();
+include "view-authors-input-list.php"
+?>
           </div>
           <div class="mb-3">
             <label for="gid" class="form-label">Genre</label>
