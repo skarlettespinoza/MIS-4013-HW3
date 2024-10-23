@@ -17,8 +17,9 @@ while($book=$books->fetch_assoc()){
   <tr>
     <td><?php echo $book["book_id"];?></td> 
     <td><?php echo $book["title"];?></td>
-    <td><?php echo $book["book_series"];?></td>   
+    <td><?php echo $book["book_series"];?></td>
     <td><?php echo $book["publication_date"];?></td>
+    <td><a href="publisher-by-book.php?id=<?php echo $book["book_id"];?>">Publisher</a></td>
   </tr>
 <?php
 }
