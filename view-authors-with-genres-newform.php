@@ -20,6 +20,7 @@
             <label for="iid" class="form-label">Author</label>
 <?php
 $authorsList = selectAuthorsForInput();
+$selectedAuthors=0;
 include "view-authors-input-list.php"
 ?>
           </div>
