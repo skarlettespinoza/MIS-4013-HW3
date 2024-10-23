@@ -18,7 +18,11 @@
         <form method="post" action="">
           <div class="mb-3">
             <label for="iid<?php echo $genre['book_id'];?>" class="form-label">Author</label>
-            <input type="number" class="form-control" id="iid<?php echo $genre['book_id'];?>" name="iid" value="<?php echo $genre['author_id'];?>">
+<?php
+$authorsList=selectAuthorsForInput();
+$selectedAuthors=$genre['author_id'];
+include "view-authors-input-list";
+?>
           </div>
           <div class="mb-3">
             <label for="gid<?php echo $genre['book_id'];?>" class="form-label">Genre</label>
