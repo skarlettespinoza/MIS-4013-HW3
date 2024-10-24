@@ -26,11 +26,17 @@ include "view-authors-input-list.php"
           </div>
           <div class="mb-3">
             <label for="gid" class="form-label">Genre</label>
-            <input type="number" class="form-control" id="gid" name="gid">
+<?php
+$genresList = selectGenresForInput();
+include "view-genres-input-list.php"
+?>
           </div>
           <div class="mb-3">
             <label for="pid" class="form-label">Publisher</label>
-            <input type="number" class="form-control" id="pid" name="pid">
+<?php
+$publishersList = selectPublishersForInput();
+include "view-publishers-input-list.php"
+?>
           </div>
           <div class="mb-3">
             <label for="title" class="form-label">Title</label>
