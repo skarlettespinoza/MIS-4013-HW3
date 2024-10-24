@@ -35,8 +35,12 @@ include "view-genres-input-list.php"
             <label for="pid" class="form-label">Publisher</label>
 <?php
 $publishersList = selectPublishersForInput();
-include "view-publishers-input-list.php"
-?>          
+if ($publishersList->num_rows > 0) {
+    include "view-publishers-input-list.php"
+} else {
+    echo '<p>No publishers available.</p>'; // Debugging message
+}
+?>         
           </div>
           <div class="mb-3">
             <label for="title" class="form-label">Title</label>
