@@ -15,7 +15,8 @@ function selectAuthors() {
 function selectGenresByAuthor($iid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT G.genre_id, genre, title, book_series, publication_date, B.book_id, B.author_id, B.publisher_id FROM `genre` G JOIN book B ON B.genre_id=G.genre_id WHERE B.author_id=?");
+        $stmt = $conn->prepare("SELECT G.genre_id, G.genre, B.title, B.book_series, B.publication_date, B.book_id, B.author_id, B.publisher_id, P.publisher_name FROM `genre` G JOIN `book` B ON B.genre_id = G.genre_id JOIN `publisher` P ON B.publisher_id = P.publisher_id WHERE B.author_id = ?
+");
         $stmt->bind_param("i", $iid);
         $stmt->execute();
         $result = $stmt->get_result();
