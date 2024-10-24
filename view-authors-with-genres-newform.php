@@ -33,6 +33,7 @@ include "view-genres-input-list.php"
           </div>
           <div class="mb-3">
             <label for="pid" class="form-label">Publisher</label>
+            <input type="number" class="form-control" id="pid" name="pid">            
           </div>
           <div class="mb-3">
             <label for="title" class="form-label">Title</label>
