@@ -81,7 +81,35 @@ function insertBooks($iid, $gid, $pid, $title, $book_series, $publication_date){
         $conn->close();
         throw $e;
     }
-}    
+}
+
+function updateBooks($iid, $gid, $pid, $title, $book_series, $publication_date, $bid){
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update `book` set `author_id`=?, `genre_id`=?, `publisher_id`=?, `title`=?, `book_series`=?, `publication_date`=? where book_id=?");
+        $stmt->bind_param("iiisssi", $iid, $gid, $pid, $title, $book_series, $publication_date, $bid);
+        $success=$stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+} 
+
+function deleteBooks($bid){
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from book where book_id=?");
+        $stmt->bind_param("i", $bid);
+        $success=$stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 
 
 
