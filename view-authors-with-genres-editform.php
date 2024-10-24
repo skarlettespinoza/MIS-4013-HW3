@@ -30,7 +30,11 @@ include "view-authors-input-list.php"
           </div>
           <div class="mb-3">
             <label for="pid<?php echo $genre['book_id']; ?>" class="form-label">Publisher</label>
-            <input type="number" class="form-control" id="pid<?php echo $genre['book_id']; ?>" name="pid" value="<?php echo $genre['publisher_id']; ?>">
+<?php
+$publishersList = selectPublishersForInput();
+$selectedPublishers=$genre['publisher_id'];
+include "view-publishers-input-list.php"
+?>
           </div>
           <div class="mb-3">
             <label for="title<?php echo $genre['book_id']; ?>" class="form-label">Title</label>
