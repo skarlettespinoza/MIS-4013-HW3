@@ -33,10 +33,6 @@ include "view-genres-input-list.php"
           </div>
           <div class="mb-3">
             <label for="pid" class="form-label">Publisher</label>
-<?php
-$publishersList = selectPublishersForInput();
-include "view-publishers-input-list.php"
-?>
           </div>
           <div class="mb-3">
             <label for="title" class="form-label">Title</label>
