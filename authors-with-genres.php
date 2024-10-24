@@ -14,21 +14,6 @@ if (isset($_POST['actionType'])){
         echo'<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
-    case "Delete":
-    if(deleteBooks($_POST['bid'])) {
-      echo'<div class="alert alert-success" role="alert">Book deleted</div>';
-    } else {
-      echo'<div class="alert alert-danger" role="alert">Error</div>';
-    }
-    break;   
-    case "Edit":
-      if (updateBooks($_POST['iid'], $_POST['gid'], $_POST['pid'], $_POST['title'], $_POST['book_series'], $_POST['publication_date'], $_POST['bid'])) {
-        echo '<div class="alert alert-success" role="alert">Book updated</div>';
-      } else {
-        echo '<div class="alert alert-danger" role="alert">Error</div>';
-      }
-      break;
-
   }
 }
 $authors = selectAuthors();
