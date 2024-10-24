@@ -26,7 +26,11 @@ include "view-authors-input-list.php"
           </div>
           <div class="mb-3">
             <label for="gid<?php echo $genre['book_id']; ?>" class="form-label">Genre</label>
-            <input type="number" class="form-control" id="gid<?php echo $genre['book_id']; ?>" name="gid" value="<?php echo $genre['genre_id']; ?>">
+<?php
+$genresList = selectGenresForInput();
+$selectedGenres=$genre['genre_id'];
+include "view-genres-input-list.php"
+?>
           </div>
           <div class="mb-3">
             <label for="pid<?php echo $genre['book_id']; ?>" class="form-label">Publisher</label>
