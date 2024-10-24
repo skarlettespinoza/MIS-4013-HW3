@@ -28,6 +28,7 @@ include "view-authors-input-list.php"
             <label for="gid" class="form-label">Genre</label>
 <?php
 $genresList = selectGenresForInput();
+$selectedGenres=0;
 include "view-genres-input-list.php"
 ?>
           </div>
@@ -35,6 +36,7 @@ include "view-genres-input-list.php"
             <label for="pid" class="form-label">Publisher</label>
 <?php
 $publishersList = selectPublishersForInput();
+$selectedPublishers=0;
 include "view-publishers-input-list.php"
 ?>         
           </div>
