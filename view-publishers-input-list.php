@@ -2,7 +2,7 @@
 <?php
 while ($publishersItem = $publishersList->fetch_assoc()){
 ?>
-    <option value="<?php echo $publishersItem['publisher_id']; ?>"><?php echo $publishers_Item['publisher_name']; ?></option>
+    <option value="<?php echo $publishersItem['publisher_id']; ?>"><?php echo $publishersItem['publisher_name']; ?></option>
 <?php  
 } 
 ?>
