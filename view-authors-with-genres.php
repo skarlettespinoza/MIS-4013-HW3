@@ -21,7 +21,7 @@ while($author=$authors->fetch_assoc()){
   $genres = selectGenresByAuthor($author["author_id"]);
   while ($genre =  $genres->fetch_assoc()){
 ?>
-    <li class="list-group-item"><?php echo $genre["genre"];?> - <?php echo $genre["title"];?> - <?php echo $genre["book_series"];?> - <?php echo $genre["publication_date"];?></li>
+    <li class="list-group-item"><?php echo $genre["genre"];?> - <?php echo $genre["title"];?> - <?php echo $genre["book_series"];?> - <?php echo $genre["publication_date"];?> - <?php echo $genre["publisher_name"];?></li>
 
     <li class="list-group-item">
       <?php include "view-authors-with-genres-editform.php";?>
