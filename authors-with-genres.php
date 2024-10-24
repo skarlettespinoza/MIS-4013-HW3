@@ -14,6 +14,13 @@ if (isset($_POST['actionType'])){
         echo'<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
+    case "Delete":
+      if(deleteBooks($_POST['bid'])) {
+        echo'<div class="alert alert-success" role="alert">Book deleted</div>';
+      } else {
+        echo'<div class="alert alert-danger" role="alert">Error</div>';
+      }
+      break;    
   }
 }
 $authors = selectAuthors();
