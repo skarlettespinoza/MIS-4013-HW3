@@ -6,50 +6,5 @@
   </svg>
 </button>
 
-<!-- Modal -->
-<div class="modal fade" id="editBookModal<?php echo $genre['book_id']; ?>" tabindex="-1" aria-labelledby="editBookModalLabel<?php echo $genre['book_id']; ?>" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editBookModalLabel<?php echo $genre['book_id'];?>">Edit book</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form method="post" action="">
-          <div class="mb-3">
-            <label for="iid<?php echo $genre['book_id'];?>" class="form-label">Author</label>
-<?php
-$authorsList=selectAuthorsForInput();
-$selectedAuthors=$genre['author_id'];
-include "view-authors-input-list";
-?>
-          </div>
-          <div class="mb-3">
-            <label for="gid<?php echo $genre['book_id'];?>" class="form-label">Genre</label>
-            <input type="number" class="form-control" id="gid<?php echo $genre['book_id'];?>" name="gid" value="<?php echo $genre['genre_id'];?>">
-          </div>
-          <div class="mb-3">
-            <label for="pid<?php echo $genre['book_id'];?>" class="form-label">Publisher</label>
-            <input type="number" class="form-control" id="pid<?php echo $genre['book_id'];?>" name="pid" value="<?php echo $genre['publisher_id'];?>">
-          </div>
-          <div class="mb-3">
-            <label for="title<?php echo $genre['book_id'];?>" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title<?php echo $genre['book_id'];?>" name="title" value="<?php echo $genre['title'];?>">
-          </div>    
-          <div class="mb-3">
-            <label for="book_series<?php echo $genre['book_id'];?>" class="form-label">Book Series</label>
-            <input type="text" class="form-control" id="book_series<?php echo $genre['book_id'];?>" name="book_series" value="<?php echo $genre['book_series'];?>">
-          </div>    
-          <div class="mb-3">
-            <label for="publication_date<?php echo $genre['book_id'];?>" class="form-label">Publication Date</label>
-            <input type="text" class="form-control" id="publication_date<?php echo $genre['book_id'];?>" name="publication_date" value="<?php echo $genre['publication_date'];?>">
-          </div>
-            <input type="hidden" name="bid" value="<?php echo $genre['book_id'];?>">
-            <input type="hidden" name="actionType" value="Edit">
-          <button type="submit" class="btn btn-primary">Save</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+
 
