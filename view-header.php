@@ -6,22 +6,6 @@
     <title><?=$pageTitle?></title>
     <!-- Link to Bootswatch Minty theme -->
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/minty/bootstrap.min.css" rel="stylesheet">
-    
-    <style>
-      /* Apply the background image to the body */
-      body {
-        background-image: url('https://image.freepik.com/free-photo/cute-book-background_53876-105346.jpg');
-        background-size: cover; /* Ensure the background covers the entire screen */
-        background-position: center; /* Center the background image */
-        background-attachment: fixed; /* Fix the background image on scroll */
-        color: white; /* Adjust text color for visibility */
-      }
-
-      /* Optional: Add some padding to the content to ensure it is not hidden behind the navbar */
-      .container {
-        padding-top: 60px; /* Adjust padding for better layout */
-      }
-    </style>
   </head>
   <body>
     <!-- Navbar with the primary color from the Minty theme -->
@@ -59,8 +43,6 @@
     <!-- Main content container -->
     <div class="container">
       <!-- Your main page content goes here -->
-      <h1>Welcome to the Homepage</h1>
-      <p>This is the homepage with a cute book background.</p>
     </div>
 
     <!-- Bootstrap JS (optional for interactive components) -->
