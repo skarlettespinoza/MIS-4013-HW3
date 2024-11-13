@@ -6,22 +6,6 @@
     <title><?=$pageTitle?></title>
     <!-- Link to Bootswatch Minty theme -->
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/minty/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      /* Apply the background image to the body */
-      body {
-        background-image: url('https://img.freepik.com/premium-vector/spring-background-with-flowers-books-banner-poster-template-with-place-text_341646-177.jpg?w=826');
-        background-size: cover; /* Ensure the background covers the entire screen */
-        background-position: center; /* Center the background image */
-        background-attachment: fixed; /* Keep the background fixed while scrolling */
-        color: white; /* Adjust text color for readability */
-      }
-
-      /* Optional: Adjust the padding to ensure content doesn't overlap with navbar */
-      .container {
-        padding-top: 60px; /* Adjust padding as necessary */
-      }
-    </style>
   </head>
   <body>
     <!-- Navbar with the primary color from the Minty theme -->
@@ -59,8 +43,6 @@
     <!-- Main content container -->
     <div class="container">
       <!-- Your main page content goes here -->
-      <h1>Welcome to the Homepage</h1>
-      <p>This is the homepage with a spring background featuring flowers and books.</p>
     </div>
 
     <!-- Bootstrap JS (optional for interactive components) -->
