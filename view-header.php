@@ -7,24 +7,16 @@
     <!-- Link to Bootswatch Quartz theme -->
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/quartz/bootstrap.min.css" rel="stylesheet">
     <style>
-      /* Custom pink background for the navbar */
+      /* Custom style to add rounded corners to the navbar */
       .navbar-custom {
-        background-color: #ff5c8d; /* Pink color from the Quartz theme */
-      }
-      /* Set text color to white for contrast */
-      .navbar-custom .navbar-brand,
-      .navbar-custom .nav-link {
-        color: #ffffff;
-      }
-      /* Optional: Add hover effect for links */
-      .navbar-custom .nav-link:hover {
-        color: #ff99b3; /* Lighter pink on hover */
+        border-radius: 15px; /* Adjust the value to control the roundness */
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-custom">
+      <!-- Add the navbar-custom class to apply rounded corners -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
