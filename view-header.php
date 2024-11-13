@@ -6,6 +6,22 @@
     <title><?=$pageTitle?></title>
     <!-- Link to Bootswatch Minty theme -->
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/minty/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      /* Apply the background image to the body */
+      body {
+        background-image: url('https://img.freepik.com/free-vector/hand-drawn-cottagecore-pattern_23-2150998343.jpg?t=st=1731529270~exp=1731532870~hmac=1b46cad8d91201709c7125bfe664387a7f3a4c30ceeef3c4cf474a27b84a3675&w=740');
+        background-size: cover; /* Ensure the background covers the entire screen */
+        background-position: center; /* Center the background image */
+        background-attachment: fixed; /* Keep the background fixed while scrolling */
+        color: white; /* Adjust text color for readability */
+      }
+
+      /* Optional: Adjust the padding to ensure content doesn't overlap with navbar */
+      .container {
+        padding-top: 60px; /* Adjust padding as necessary */
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar with the primary color from the Minty theme -->
@@ -43,6 +59,8 @@
     <!-- Main content container -->
     <div class="container">
       <!-- Your main page content goes here -->
+      <h1>Welcome to the Homepage</h1>
+      <p>This is the homepage with a cottagecore pattern background.</p>
     </div>
 
     <!-- Bootstrap JS (optional for interactive components) -->
