@@ -8,8 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/minty/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <!-- Navbar spanning the full width of the page -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
+    <!-- Navbar with the primary color from the Minty theme -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary container-fluid">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
