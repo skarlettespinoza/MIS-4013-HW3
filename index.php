@@ -1,12 +1,8 @@
 <?php
-$pageTitle = "Home";
-include "view-header.php"; // Includes the header with the custom theme link
+$pageTitle="Home";
+include "view-header.php";
 ?>
-  
-<div class="container">
-  <h1>Homework 3</h1>
-</div>
-  
+<h1>Homework 3</h1>
 <?php
-include "view-footer.php"; // Includes the footer
+include "view-footer.php";
 ?>
