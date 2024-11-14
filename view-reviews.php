@@ -52,8 +52,6 @@
           </form>
         </td>
 
-        <!-- Optional link to the related book, or author, or other relevant page -->
-        <td><a href="book-reviews.php?id=<?php echo $review["book_id"]; ?>">View Book</a></td>
       </tr>
     <?php
     }
