@@ -3,8 +3,8 @@
 require_once("util-db.php");
 require_once("model-reviews-by-book.php");
 
-$pageTitle="Reviews by Book";
-include "view-header.php";
+$pageTitle = "Reviews by Book";
+include "view-header.php"; // Navbar is included in view-header.php
 
 // Fetch the reviews from the database
 $reviews = selectReviewsByBook($_GET['id']);  // Corrected $_GET['id'] for book_id
@@ -49,5 +49,5 @@ while($review = $reviews->fetch_assoc()) {
 </div>
 
 <?php
-include "view-footer.php";
+include "view-footer.php"; // Footer is included here
 ?>
