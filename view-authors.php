@@ -34,27 +34,17 @@
     </thead>
     <tbody>
       <?php
-      // Check if a search query is submitted
       $search = isset($_GET['search']) ? $_GET['search'] : '';
 
-      // Modify the query to filter authors based on the search input
-      if ($search) {
-        $query = "SELECT * FROM authors WHERE author_name LIKE ?";
-        $stmt = $conn->prepare($query);
-        $stmt->bind_param("s", $search_param);
-        $search_param = '%' . $search . '%';
-      } else {
-        $query = "SELECT * FROM authors";
-        $stmt = $conn->prepare($query);
-      }
+      // Retrieve all authors
+      $query = "SELECT * FROM authors";
+      $authors = $conn->query($query);
 
-      $stmt->execute();
-      $authors = $stmt->get_result();
-
-      // Display the authors
       while ($author = $authors->fetch_assoc()) {
+        // Check if the current author matches the search term
+        $isHighlighted = $search && stripos($author["author_name"], $search) !== false;
       ?>
-        <tr>
+        <tr class="<?php echo $isHighlighted ? 'table-warning' : ''; ?>">
           <td><?php echo $author["author_id"]; ?></td>
           <td><?php echo $author["author_name"]; ?></td>
           <td><?php echo $author["author_birthdate"]; ?></td>
