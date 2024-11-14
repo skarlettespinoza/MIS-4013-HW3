@@ -9,14 +9,22 @@
 
     <style>
       /* Background image styling for the homepage */
-      body {
+      html, body {
+        margin: 0;
+        padding: 0;
         background-image: url('https://4kwallpapers.com/images/wallpapers/lofi-girl-reading-3840x2160-14889.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
         color: white; /* Optional: Adjust text color for readability */
+        overflow-x: hidden; /* Prevent horizontal scroll */
       }
+
+      .navbar {
+        margin-bottom: 0; /* Removes default margin below navbar */
+      }
+
       .container {
         background: rgba(0, 0, 0, 0.5); /* Optional: Darken background behind text */
         padding: 20px;
@@ -26,7 +34,7 @@
   </head>
   <body>
     <!-- Navbar with the primary color from the Minty theme -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
