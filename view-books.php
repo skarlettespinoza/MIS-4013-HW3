@@ -19,7 +19,12 @@ while($book=$books->fetch_assoc()){
     <td><?php echo $book["title"];?></td>
     <td><?php echo $book["book_series"];?></td>
     <td><?php echo $book["publication_date"];?></td>
-    <td><a href="books-by-publisher.php?id=<?php echo $book["book_id"];?>">Publisher</a></td>
+    <td>
+      <form method="post" action="reviews-by-book.php">
+        <input type="hidden" name="rid" value="<?php echo $review["review_id"];?>">
+        <button type="submit" class="btn btn-primary">Reviews</button>
+      </form>
+    </td>
   </tr>
 <?php
 }
