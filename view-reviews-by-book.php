@@ -3,10 +3,10 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Review ID</th>
-        <th>Review</th>
-        <th>Rating</th>
-        <th>Review Date</th>
+        <th><div>Review ID</div></th>
+        <th><div>Review</div></th>
+        <th><div>Rating</div></th>
+        <th><div>Review Date</div></th>
       </tr>
     </thead>
     <tbody>
