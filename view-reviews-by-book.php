@@ -1,12 +1,34 @@
+<?php
+// Assuming you're including necessary files at the top
+require_once("util-db.php");
+require_once("model-reviews-by-book.php");
+
+$pageTitle="Reviews by Book";
+include "view-header.php";
+
+// Fetch the reviews from the database
+$reviews = selectReviewsByBook($_GET['id']);  // Corrected $_GET['id'] for book_id
+?>
+
+<style>
+  th, td {
+    white-space: nowrap;  /* Prevent wrapping */
+  }
+
+  .no-wrap {
+    white-space: nowrap; /* Ensure no text wrapping */
+  }
+</style>
+
 <h1>Reviews by Book</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
       <tr>
-        <th><div>Review ID</div></th>
-        <th><div>Review</div></th>
-        <th><div>Rating</div></th>
-        <th><div>Review Date</div></th>
+        <th class="no-wrap">Review ID</th>
+        <th class="no-wrap">Review</th>
+        <th class="no-wrap">Rating</th>
+        <th class="no-wrap">Review Date</th>
       </tr>
     </thead>
     <tbody>
@@ -25,3 +47,7 @@ while($review = $reviews->fetch_assoc()) {
     </tbody>
   </table>
 </div>
+
+<?php
+include "view-footer.php";
+?>
