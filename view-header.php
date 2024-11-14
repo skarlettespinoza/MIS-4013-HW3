@@ -6,6 +6,23 @@
     <title><?=$pageTitle?></title>
     <!-- Link to Bootswatch Minty theme -->
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/minty/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      /* Background image styling for the homepage */
+      body {
+        background-image: url('https://4kwallpapers.com/images/wallpapers/lofi-girl-reading-3840x2160-14889.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: white; /* Optional: Adjust text color for readability */
+      }
+      .container {
+        background: rgba(0, 0, 0, 0.5); /* Optional: Darken background behind text */
+        padding: 20px;
+        border-radius: 8px;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar with the primary color from the Minty theme -->
