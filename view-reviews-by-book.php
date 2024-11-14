@@ -1,22 +1,12 @@
-<style>
-  th, td {
-    white-space: nowrap;  /* Prevent wrapping */
-  }
-
-  .no-wrap {
-    white-space: nowrap; /* Ensure no text wrapping */
-  }
-</style>
-
 <h1>Reviews by Book</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
       <tr>
-        <th class="no-wrap">Review ID</th>
-        <th class="no-wrap">Review</th>
-        <th class="no-wrap">Rating</th>
-        <th class="no-wrap">Review Date</th>
+        <th>ID</th>
+        <th>Review</th>
+        <th>Rating</th>
+        <th>Date</th>
       </tr>
     </thead>
     <tbody>
@@ -35,7 +25,3 @@ while($review = $reviews->fetch_assoc()) {
     </tbody>
   </table>
 </div>
-
-<?php
-include "view-footer.php"; // Footer is included here
-?>
