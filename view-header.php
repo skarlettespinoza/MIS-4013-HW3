@@ -35,6 +35,9 @@
             <li class="nav-item">
               <a class="nav-link" href="books.php">Books</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reviews.php">Reviews</a>
+            </li>            
           </ul>
         </div>
       </div>
