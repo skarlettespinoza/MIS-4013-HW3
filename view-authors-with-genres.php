@@ -37,16 +37,6 @@ while($author = $authors->fetch_assoc()) {
               <p><?php echo $genre["review"]; ?></p>
             </div>
 
-            <!-- Star Rating Section -->
-            <p><strong>Rating:</strong></p>
-            <div class="stars" data-book-id="<?php echo $genre["book_id"]; ?>">
-              <!-- Generate 5 star icons, all empty initially -->
-              <i class="fa fa-star" data-index="1"></i>
-              <i class="fa fa-star" data-index="2"></i>
-              <i class="fa fa-star" data-index="3"></i>
-              <i class="fa fa-star" data-index="4"></i>
-              <i class="fa fa-star" data-index="5"></i>
-            </div>
 
             <!-- Edit Form Section -->
             <p>
@@ -73,42 +63,4 @@ while($author = $authors->fetch_assoc()) {
 
     </div>
   </div> <!-- End of Author's Main Card -->
-<?php
-}
-?>
-/* Style the stars */
-.stars i {
-  font-size: 25px;  /* Adjust star size */
-  color: lightgray;  /* Default empty star color */
-  cursor: pointer;  /* Pointer on hover to show interactivity */
-}
 
-.stars i.filled {
-  color: gold;  /* Filled star color */
-}
-
-.stars i:hover,
-.stars i:hover ~ i {
-  color: gold;  /* Hover effect to highlight stars */
-}
-document.querySelectorAll('.stars i').forEach(function(star) {
-  star.addEventListener('click', function() {
-    let rating = this.getAttribute('data-index');
-    let parent = this.closest('.stars');
-    let stars = parent.querySelectorAll('i');
-    
-    // Set the rating by adding the 'filled' class to the clicked star and all previous stars
-    stars.forEach(function(star, index) {
-      if (index < rating) {
-        star.classList.add('filled');
-      } else {
-        star.classList.remove('filled');
-      }
-    });
-
-    // Optionally, send the rating to the server here
-    let bookId = parent.getAttribute('data-book-id');
-    // Send the rating value via an AJAX request to save it in your database
-    // For example: saveRating(bookId, rating);
-  });
-});
