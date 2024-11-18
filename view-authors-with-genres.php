@@ -81,23 +81,31 @@
 
 <!-- Add this style section inside the <head> tag or at the bottom of your page -->
 <style>
-  .scrollable-review {
-    max-height: 150px;  /* Adjust the height according to your needs */
-    overflow-y: auto;   /* Makes the content scrollable if it overflows */
-    padding: 5px;       /* Adds padding inside the review box */
-    border: 1px solid #ddd;  /* Adds a light border around the review */
-    border-radius: 5px;  /* Optional: gives a slight rounded corner */
-  }
-
-  /* Ensure that each card takes the full width */
+  /* Make sure both the author and book cards have consistent borders */
   .card {
     width: 100%;  /* Make sure the card takes the full width */
-    margin-bottom: 1rem;  /* Optional: adds spacing between cards */
+    margin-bottom: 1rem;  /* Adds spacing between cards */
+    border: 1px solid #ddd;  /* Consistent border for all cards */
+    border-radius: 5px;  /* Optional: gives a slight rounded corner for both */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Optional: adds a slight shadow for better visibility */
+  }
+
+  .card-body {
+    padding: 1rem;  /* Ensures padding inside the card body for proper spacing */
   }
 
   /* Optional: Remove card-group's horizontal spacing */
   .card-group {
     display: flex;
     flex-direction: column;
+  }
+
+  /* Ensure the review box has a consistent look across both cards */
+  .scrollable-review {
+    max-height: 150px;  /* Adjust the height according to your needs */
+    overflow-y: auto;   /* Makes the content scrollable if it overflows */
+    padding: 5px;       /* Adds padding inside the review box */
+    border: 1px solid #ddd;  /* Ensures review box has a consistent border */
+    border-radius: 5px;  /* Optional: gives a slight rounded corner */
   }
 </style>
