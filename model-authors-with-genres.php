@@ -69,11 +69,11 @@ function selectPublishersForInput() {
     }
 }
 
-function insertBooks($iid, $gid, $pid, $title, $book_series, $publication_date){
+function insertBooks($iid, $gid, $pid, $title, $book_series, $publication_date, $review){
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `book` (`author_id`, `genre_id`, `publisher_id`, `title`, `book_series`, `publication_date`,`review`) VALUES (?,?,?,?,?,?,?)");
-        $stmt->bind_param("iiissss", $iid, $gid, $pid, $title, $book_series, $publication_date, $review);
+        $stmt = $conn->prepare("INSERT INTO `book` (`author_id`, `genre_id`, `publisher_id`, `title`, `book_series`, `publication_date`, `review`) VALUES (?,?,?,?,?,?,?)");
+        $stmt->bind_param("iiissss", $iid, $gid, $pid, $title, $book_series, $publication_date, $review);  // Now binding review
         $success=$stmt->execute();
         $conn->close();
         return $success;
