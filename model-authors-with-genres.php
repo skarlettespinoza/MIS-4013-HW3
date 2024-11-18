@@ -86,7 +86,7 @@ function insertBooks($iid, $gid, $pid, $title, $book_series, $publication_date, 
 function updateBooks($iid, $gid, $pid, $title, $book_series, $publication_date, $review, $bid){
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `book` set `author_id`=?, `genre_id`=?, `publisher_id`=?, `title`=?, `book_series`=?, `publication_date`=? `review`=? where book_id=?");
+        $stmt = $conn->prepare("update `book` set `author_id`=?, `genre_id`=?, `publisher_id`=?, `title`=?, `book_series`=?, `publication_date`=?, `review`=? where book_id=?");
         $stmt->bind_param("iiissssi", $iid, $gid, $pid, $title, $book_series, $publication_date, $review, $bid);
         $success=$stmt->execute();
         $conn->close();
