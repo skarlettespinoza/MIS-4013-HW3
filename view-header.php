@@ -34,10 +34,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="books.php">Books</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="books-with-reviews.php">Reviews</a>
-            </li>            
+            </li>         
           </ul>
         </div>
       </div>
