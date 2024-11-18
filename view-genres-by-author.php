@@ -8,6 +8,7 @@
       <th>Title</th>
       <th>Book Series</th>
       <th>Publication Date</th>
+      <th>Review</th>  
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@ while($genre=$genres->fetch_assoc()){
     <td><?php echo $genre["title"];?></td>
     <td><?php echo $genre["book_series"];?></td>
     <td><?php echo $genre["publication_date"];?></td>
+    <td><?php echo $genre["review"];?></td>    
   </tr>
 <?php
 }
