@@ -9,6 +9,7 @@
       <th>Title</th>
       <th>Book Series</th>
       <th>Publication Date</th>
+      <th>Review</th>
       </tr>
     </thead>
     <tbody>
@@ -22,6 +23,7 @@ while($book=$books->fetch_assoc()){
     <td><?php echo $book["title"];?></td>
     <td><?php echo $book["book_series"];?></td>
     <td><?php echo $book["publication_date"];?></td>
+    <td><?php echo $book["review"];?></td>    
   </tr>
 <?php
 }
