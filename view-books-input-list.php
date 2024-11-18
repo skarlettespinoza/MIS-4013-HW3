@@ -2,7 +2,7 @@
 <?php
 while ($booksItem = $booksList->fetch_assoc()) {
   $selText = "";
-  if($selectedBook==$booksItem['book_id']){
+  if($selectedBooks==$booksItem['book_id']){
     $selText="selected";
   }
 ?>
