@@ -8,6 +8,7 @@
       <th>Title</th>
       <th>Book Series</th>
       <th>Publication Date</th>
+      <th>Review</th>  
       </tr>
     </thead>
     <tbody>
