@@ -16,29 +16,26 @@
       </div>
       <div class="modal-body">
         <form method="post" action="">
-          <!-- Book Selection -->
           <div class="mb-3">
             <label for="book_id" class="form-label">Book</label>
-            <?php
-            $booksList = selectBooksForInput(); // Function to get available books
-            $selectedBooks = 0;
-            include "view-books-input-list.php"; // Include the list of books for selection
-            ?>
+<?php
+$booksList = selectBooksForInput(); // Function to fetch available books for selection
+$selectedBooks = 0;
+include "view-books-input-list.php"; // Dropdown or input for book selection
+?>
           </div>
-          
-          <!-- Review Text -->
           <div class="mb-3">
-            <label for="reviewText" class="form-label">Review</label>
-            <textarea class="form-control" id="reviewText" name="reviewText" rows="3" required></textarea>
+            <label for="review" class="form-label">Review</label>
+            <textarea class="form-control" id="review" name="review" rows="3"></textarea>
           </div>
-
-          <!-- Rating -->
           <div class="mb-3">
-            <label for="rating" class="form-label">Rating (1 to 5)</label>
-            <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" required>
+            <label for="rating" class="form-label">Rating</label>
+            <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" step="1">
           </div>
-
-          <!-- Hidden Action Type -->
+          <div class="mb-3">
+            <label for="review_date" class="form-label">Review Date</label>
+            <input type="date" class="form-control" id="review_date" name="review_date">
+          </div>
           <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
