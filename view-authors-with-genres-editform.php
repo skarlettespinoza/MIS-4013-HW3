@@ -52,6 +52,10 @@ include "view-publishers-input-list.php"
             <label for="publication_date<?php echo $genre['book_id']; ?>" class="form-label">Publication Date</label>
             <input type="text" class="form-control" id="publication_date<?php echo $genre['book_id']; ?>" name="publication_date" value="<?php echo $genre['publication_date']; ?>">
           </div>   
+          <div class="mb-3">
+            <label for="review<?php echo $genre['book_id']; ?>" class="form-label">Review</label>
+            <input type="text" class="form-control" id="review<?php echo $genre['book_id']; ?>" name="review" value="<?php echo $genre['review']; ?>">
+          </div>           
             <input type="hidden" name="bid" value="<?php echo $genre['book_id']; ?>">          
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
