@@ -12,7 +12,6 @@ include "view-authors-newform.php";
   <table class="table">
     <thead>
       <tr>
-      <th>ID</th>
       <th>Name</th>
       <th>Birthdate</th> 
       <th>Age</th> 
@@ -26,7 +25,6 @@ include "view-authors-newform.php";
 while($author=$authors->fetch_assoc()){
 ?>
   <tr>
-    <td><?php echo $author["author_id"];?></td> 
     <td><?php echo $author["author_name"];?></td>
     <td><?php echo $author["author_birthdate"];?></td>
     <td><?php echo $author["author_age"];?></td>
