@@ -55,11 +55,7 @@ include "view-publishers-input-list.php"
           <div class="mb-3">
             <label for="review<?php echo $genre['book_id']; ?>" class="form-label">Review</label>
             <input type="text" class="form-control" id="review<?php echo $genre['book_id']; ?>" name="review" value="<?php echo $genre['review']; ?>">
-          </div>
-          <div class="mb-3">
-            <label for="rating<?php echo $genre['book_id']; ?>" class="form-label">Rating</label>
-            <input type="text" class="form-control" id="rating<?php echo $genre['book_id']; ?>" name="rating" value="<?php echo $genre['rating']; ?>">
-          </div>          
+          </div>         
             <input type="hidden" name="bid" value="<?php echo $genre['book_id']; ?>">          
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
