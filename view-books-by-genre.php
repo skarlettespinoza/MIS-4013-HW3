@@ -3,7 +3,6 @@
   <table class="table">
     <thead>
       <tr>
-      <th>ID</th>
       <th>Genre</th>
       <th>Title</th>
       <th>Book Series</th>
@@ -16,7 +15,6 @@
 while($book=$books->fetch_assoc()){
 ?>
   <tr>
-    <td><?php echo $book["genre_id"];?></td> 
     <td><?php echo $book["genre"];?></td>
     <td><?php echo $book["title"];?></td>
     <td><?php echo $book["book_series"];?></td>
