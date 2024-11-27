@@ -1,3 +1,4 @@
+
 <?php
 require_once("util-db.php");
 require_once("model-authors-with-genres.php");
@@ -15,7 +16,7 @@ if (isset($_POST['actionType'])){
       }
       break;
     case "Edit":
-      if(updateBooks($_POST['iid'],$_POST['gid'],$_POST['pid'],$_POST['title'],$_POST['book_series'],$_POST['publication_date'],$_POST['review'],,$_POST['rating'],$_POST['bid'])) {
+      if(updateBooks($_POST['iid'],$_POST['gid'],$_POST['pid'],$_POST['title'],$_POST['book_series'],$_POST['publication_date'],$_POST['review'],$_POST['bid'])) {
         echo'<div class="alert alert-success" role="alert">Book edited</div>';
       } else {
         echo'<div class="alert alert-danger" role="alert">Error</div>';
