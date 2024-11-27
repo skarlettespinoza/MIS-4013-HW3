@@ -1,113 +1,135 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>Author's books with genres</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Author's Books with Ratings</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+  <style>
+    /* Star Rating */
+    .star-rating {
+      display: flex;
+      direction: row-reverse;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+    .star-rating input[type="radio"] {
+      display: none;
+    }
+    .star-rating label {
+      font-size: 24px;
+      color: #ddd;
+      cursor: pointer;
+    }
+    .star-rating input:checked ~ label {
+      color: #ffc107;
+    }
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color: #ffc107;
+    }
+    /* Optional: Styling for the review box */
+    .scrollable-review {
+      max-height: 150px;
+      overflow-y: auto;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Author's Books with Genres</h1>
+      </div>
     </div>
-    <div class="col-auto">  
-      <?php include "view-authors-with-genres-newform.php"; ?>
-    </div>
-  </div>
 
-  <div class="card-group flex-column w-100"> <!-- Make this a full-width container -->
-    <?php
-      // Fetch authors
-      while($author = $authors->fetch_assoc()) {
-    ?>
-      <!-- Author's Main Card (Full width) -->
-      <div class="card w-100 mb-3"> <!-- Ensures the author card is full width -->
-        <div class="card-body">
-          <!-- Author Name -->
-          <h5 class="card-title"><?php echo $author["author_name"]; ?></h5>
+    <div class="card-group flex-column w-100">
+      <?php
+        // Include database connection and helper functions
+        include "db.php";
+        include "functions.php";
 
-          <!-- Author Birthdate -->
-          <p class="card-text"><small class="text-body-secondary">Author Birthdate: <?php echo $author["author_birthdate"]; ?></small></p>
+        // Fetch authors
+        $authors = selectAuthors();
+        while ($author = $authors->fetch_assoc()) {
+      ?>
+        <!-- Author's Main Card -->
+        <div class="card w-100 mb-3">
+          <div class="card-body">
+            <!-- Author Name -->
+            <h5 class="card-title"><?php echo $author["author_name"]; ?></h5>
+            <!-- Author Birthdate -->
+            <p class="card-text"><small class="text-body-secondary">Author Birthdate: <?php echo $author["author_birthdate"]; ?></small></p>
 
-          <!-- Fetch books for the current author -->
-          <?php
-            $genres = selectGenresByAuthor($author["author_id"]);
-            while ($genre = $genres->fetch_assoc()) {
-          ?>
-            <!-- Individual Book Card (Full width) -->
-            <div class="card w-100 mb-3"> <!-- Ensure the book card is full width -->
-              <div class="card-body">
-                <!-- Genre Section -->
-                <p><strong>Genre:</strong> <?php echo $genre["genre"]; ?></p>
+            <!-- Fetch books for the current author -->
+            <?php
+              $genres = selectGenresByAuthor($author["author_id"]);
+              while ($genre = $genres->fetch_assoc()) {
+            ?>
+              <!-- Book Card -->
+              <div class="card w-100 mb-3">
+                <div class="card-body">
+                  <p><strong>Genre:</strong> <?php echo $genre["genre"]; ?></p>
+                  <p><strong>Title:</strong> <?php echo $genre["title"]; ?></p>
+                  <p><strong>Book Series:</strong> <?php echo $genre["book_series"]; ?></p>
+                  <p><strong>Publication Date:</strong> <?php echo $genre["publication_date"]; ?></p>
+                  <p><strong>Review:</strong></p>
+                  <div class="scrollable-review">
+                    <p><?php echo $genre["review"]; ?></p>
+                  </div>
 
-                <!-- Title Section -->
-                <p><strong>Title:</strong> <?php echo $genre["title"]; ?></p>
-
-                <!-- Book Series Section -->
-                <p><strong>Book Series:</strong> <?php echo $genre["book_series"]; ?></p>
-
-                <!-- Publication Date Section -->
-                <p><strong>Publication Date:</strong> <?php echo $genre["publication_date"]; ?></p>
-
-                <!-- Review Section -->
-                <p><strong>Review:</strong></p>
-                <div class="scrollable-review">
-                  <p><?php echo $genre["review"]; ?></p>
-                </div>
-
-                <!-- Edit Form Section -->
-                <p>
-                  <?php include "view-authors-with-genres-editform.php"; ?>
-                </p>
-
-                <!-- Delete Button Section -->
-                <p>
+                  <!-- Star Rating Section -->
                   <form method="post" action="">
-                    <input type="hidden" name="bid" value="<?php echo $genre["book_id"]; ?>">
-                    <input type="hidden" name="actionType" value="Delete">
-                    <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                      </svg>
-                    </button>
+                    <p><strong>Your Rating:</strong></p>
+                    <div class="star-rating">
+                      <?php for ($i = 1; $i <= 5; $i++): ?>
+                        <input 
+                          type="radio" 
+                          id="star-<?php echo $genre['book_id']; ?>-<?php echo $i; ?>" 
+                          name="rating" 
+                          value="<?php echo $i; ?>" 
+                          <?php if (isset($genre['rating']) && $genre['rating'] == $i) echo "checked"; ?> 
+                        />
+                        <label for="star-<?php echo $genre['book_id']; ?>-<?php echo $i; ?>" class="star">&#9733;</label>
+                      <?php endfor; ?>
+                    </div>
+
+                    <!-- Hidden Inputs -->
+                    <input type="hidden" name="book_id" value="<?php echo $genre["book_id"]; ?>" />
+                    <button type="submit" name="actionType" value="Rate" class="btn btn-primary">Submit Rating</button>
                   </form>
-                </p>
-              </div>
-            </div> <!-- End of Individual Book Card -->
-          <?php
-            }
-          ?>
-
-        </div>
-      </div> <!-- End of Author's Main Card -->
-    <?php
-      }
-    ?>
+                </div>
+              </div> <!-- End of Book Card -->
+            <?php
+              }
+            ?>
+          </div>
+        </div> <!-- End of Author Card -->
+      <?php
+        }
+      ?>
+    </div>
   </div>
-</div>
 
-<!-- Add this style section inside the <head> tag or at the bottom of your page -->
-<style>
-  /* Ensure that each card takes the full width */
-  .card {
-    width: 100%;  /* Make sure the card takes the full width */
-    margin-bottom: 1rem;  /* Optional: adds spacing between cards */
-    border: 1px solid #ddd;  /* Consistent border for all cards */
-    border-radius: 5px;  /* Default rounded corners for all cards */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Optional: adds a slight shadow for better visibility */
-  }
+  <?php
+  // Handle rating submission
+  if ($_SERVER["REQUEST_METHOD"] === "POST" && $_POST["actionType"] === "Rate") {
+      $book_id = intval($_POST["book_id"]);
+      $rating = intval($_POST["rating"]);
 
-  /* Remove rounded corners for the top-left and bottom-left corners of the first author card */
-  .card:first-child {
-    border-top-left-radius: 0;  /* Remove top-left corner rounding */
-    border-bottom-left-radius: 0;  /* Remove bottom-left corner rounding */
+      // Update the rating in the database
+      $stmt = $conn->prepare("UPDATE books SET rating = ? WHERE book_id = ?");
+      $stmt->bind_param("ii", $rating, $book_id);
+      if ($stmt->execute()) {
+          echo "<div class='alert alert-success'>Thank you for your rating!</div>";
+      } else {
+          echo "<div class='alert alert-danger'>Failed to submit your rating. Please try again.</div>";
+      }
+      $stmt->close();
   }
-
-  /* Ensure that the review box has a consistent look across both cards */
-  .scrollable-review {
-    max-height: 150px;  /* Adjust the height according to your needs */
-    overflow-y: auto;   /* Makes the content scrollable if it overflows */
-    padding: 5px;       /* Adds padding inside the review box */
-    border: 1px solid #ddd;  /* Ensures review box has a consistent border */
-    border-radius: 5px;  /* Optional: gives a slight rounded corner */
-  }
-
-  /* Optional: Remove card-group's horizontal spacing */
-  .card-group {
-    display: flex;
-    flex-direction: column;
-  }
-</style>
+  ?>
+</body>
+</html>
