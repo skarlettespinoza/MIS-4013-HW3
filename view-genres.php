@@ -43,6 +43,7 @@ include "view-genres-editform.php";
     <td>
       <form method="post" action="books-by-genre.php">
         <input type="hidden" name="gid" value="<?php echo $genre["genre_id"];?>">
+        <input type="hidden" name="genre_name" value="<?php echo htmlspecialchars($genre["genre"]); ?>">
         <button type="submit" class="btn btn-primary">Books</button>
       </form>
     </td>
