@@ -15,7 +15,7 @@ function selectAuthors() {
 function selectGenresByAuthor($iid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT G.genre_id, genre, title, book_series, publication_date, review, B.book_id, B.author_id, B.publisher_id FROM genre G JOIN book B ON B.genre_id=G.genre_id WHERE B.author_id=?");
+        $stmt = $conn->prepare("SELECT G.genre_id, genre, title, book_series, publication_date, review, rating B.book_id, B.author_id, B.publisher_id FROM genre G JOIN book B ON B.genre_id=G.genre_id WHERE B.author_id=?");
         $stmt->bind_param("i", $iid);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -69,11 +69,11 @@ function selectPublishersForInput() {
     }
 }
 
-function insertBooks($iid, $gid, $pid, $title, $book_series, $publication_date, $review){
+function insertBooks($iid, $gid, $pid, $title, $book_series, $publication_date, $review, $rating){
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `book` (`author_id`, `genre_id`, `publisher_id`, `title`, `book_series`, `publication_date`, `review`) VALUES (?,?,?,?,?,?,?)");
-        $stmt->bind_param("iiissss", $iid, $gid, $pid, $title, $book_series, $publication_date, $review);  // Now binding review
+        $stmt = $conn->prepare("INSERT INTO `book` (`author_id`, `genre_id`, `publisher_id`, `title`, `book_series`, `publication_date`, `review`, `rating`) VALUES (?,?,?,?,?,?,?,?)");
+        $stmt->bind_param("iiissssi", $iid, $gid, $pid, $title, $book_series, $publication_date, $review, $rating);  // Now binding review
         $success=$stmt->execute();
         $conn->close();
         return $success;
@@ -83,11 +83,11 @@ function insertBooks($iid, $gid, $pid, $title, $book_series, $publication_date, 
     }
 }
 
-function updateBooks($iid, $gid, $pid, $title, $book_series, $publication_date, $review, $bid){
+function updateBooks($iid, $gid, $pid, $title, $book_series, $publication_date, $review, $rating, $bid){
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `book` set `author_id`=?, `genre_id`=?, `publisher_id`=?, `title`=?, `book_series`=?, `publication_date`=?, `review`=? where book_id=?");
-        $stmt->bind_param("iiissssi", $iid, $gid, $pid, $title, $book_series, $publication_date, $review, $bid);
+        $stmt = $conn->prepare("update `book` set `author_id`=?, `genre_id`=?, `publisher_id`=?, `title`=?, `book_series`=?, `publication_date`=?, `review`=?, `rating`=? where book_id=?");
+        $stmt->bind_param("iiissssii", $iid, $gid, $pid, $title, $book_series, $publication_date, $review, $rating, $bid);
         $success=$stmt->execute();
         $conn->close();
         return $success;
