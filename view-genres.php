@@ -12,7 +12,6 @@ include "view-genres-newform.php";
   <table class="table">
     <thead>
       <tr>
-      <th>ID</th>
       <th>Genre</th>
         <th></th>
         <th></th>
@@ -24,7 +23,6 @@ include "view-genres-newform.php";
 while($genre=$genres->fetch_assoc()){
 ?>
   <tr>
-    <td><?php echo $genre["genre_id"];?></td> 
     <td><?php echo $genre["genre"];?></td>
     <td>
 <?php
