@@ -45,6 +45,7 @@ include "view-publishers-editform.php";
     <td>
       <form method="post" action="books-by-publisher.php">
         <input type="hidden" name="pid" value="<?php echo $publisher["publisher_id"];?>">
+        <input type="hidden" name="publisher_name" value="<?php echo htmlspecialchars($publisher["publisher_name"]); ?>">
         <button type="submit" class="btn btn-primary">Books</button>
       </form>
     </td>
