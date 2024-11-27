@@ -55,11 +55,7 @@ include "view-publishers-input-list.php"
           <div class="mb-3">
             <label for="review" class="form-label">Review</label>
             <input type="text" class="form-control" id="review" name="review">
-          </div>    
-          <div class="mb-3">
-            <label for="rating" class="form-label">Rating</label>
-            <input type="text" class="form-control" id="rating" name="rating">
-          </div>            
+          </div>               
             <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
