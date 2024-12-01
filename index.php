@@ -9,7 +9,7 @@ include "view-header.php";
        style="position: absolute; width: 800px; height: auto; z-index: 1; max-width: 100%;">
 
   <!-- About Section -->
-  <div style="position: relative; z-index: 2; border: 2px solid rgba(255, 105, 180, 1); border-radius: 15px; padding: 20px; background-color: rgba(255, 182, 193, 0.2); max-width: 650px; margin-top: 20px;">
+  <div style="position: relative; z-index: 2; padding: 20px; max-width: 650px; margin-top: 20px;">
     <h2>About <span style="font-style: italic; font-weight: bold;">My Book Nook</span></h2>
     <p style="max-width: 600px; margin: 0;">
       Welcome to <span style="font-style: italic; font-weight: bold;">My Book Nook</span>, your personal digital library where your literary world comes to life! 
