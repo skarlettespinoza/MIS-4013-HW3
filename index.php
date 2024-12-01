@@ -6,7 +6,7 @@ include "view-header.php";
   <!-- Image Layer -->
   <img src="https://static.vecteezy.com/system/resources/previews/021/813/455/non_2x/rectangle-lavender-floral-frame-botanical-flower-border-illustration-simple-elegant-romantic-style-for-wedding-events-signs-logo-labels-social-media-posts-etc-vector.jpg" 
        alt="Library Logo" 
-       style="position: absolute; width: 800px; height: auto; z-index: 1; max-width: 100%;">
+       style="position: absolute; width: 900px; height: auto; z-index: 1; max-width: 100%;"> <!-- Increased width -->
 
   <!-- About Section -->
   <div style="position: relative; z-index: 2; padding: 20px; max-width: 650px; margin-top: 20px;">
