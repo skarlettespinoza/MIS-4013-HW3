@@ -1,6 +1,7 @@
 <h1>Authors Chart</h1>
-<div>
-  <canvas id="myChart"></canvas>
+<div style="max-width: 600px; margin: auto;">
+  <!-- Set max-width to control chart size -->
+  <canvas id="myChart" style="width:100%; height:300px;"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -29,12 +30,14 @@ echo implode(", ", $labels);
 echo implode(", ", $data);
 ?>
         ],
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: 'rgba(32, 201, 151, 0.2)', /* Minty secondary color with opacity */
+        borderColor: 'rgba(32, 201, 151, 1)', /* Minty secondary color */
         borderWidth: 1
       }]
     },
     options: {
+      responsive: true, /* Make the chart responsive */
+      maintainAspectRatio: false, /* Allow height customization */
       scales: {
         y: {
           beginAtZero: true
