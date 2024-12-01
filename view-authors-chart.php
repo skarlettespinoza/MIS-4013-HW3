@@ -1,6 +1,6 @@
 <h1>Authors Chart</h1>
 <div style="max-width: 800px; margin: auto;"> <!-- Increased max-width to 800px -->
-  <canvas id="myChart" style="width:100%; height:500px;"></canvas> <!-- Increased height to 400px -->
+  <canvas id="myChart" style="width:100%; height:500px;"></canvas> <!-- Increased height to 500px -->
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -29,8 +29,8 @@ echo implode(", ", $labels);
 echo implode(", ", $data);
 ?>
         ],
-        backgroundColor: 'rgba(32, 201, 151, 0.2)', /* Minty secondary color with opacity */
-        borderColor: 'rgba(32, 201, 151, 1)', /* Minty secondary color */
+        backgroundColor: 'rgba(255, 182, 193, 0.5)', /* Light pink with opacity */
+        borderColor: 'rgba(255, 105, 180, 1)', /* Darker pink for the border */
         borderWidth: 1
       }]
     },
