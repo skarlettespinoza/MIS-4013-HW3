@@ -36,7 +36,10 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="authors-with-genres.php">Authors with genres</a>
-            </li>        
+            </li>      
+            <li class="nav-item">
+              <a class="nav-link" href="authors-chart.php">Authors Chart</a>
+            </li>            
           </ul>
         </div>
       </div>
