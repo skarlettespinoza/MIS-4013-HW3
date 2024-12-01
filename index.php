@@ -4,7 +4,7 @@ include "view-header.php";
 ?>
 <div style="position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
   <!-- Image Layer -->
-  <img src="https://t4.ftcdn.net/jpg/03/37/29/51/360_F_337295199_fhQPkyCIjio1DlSLG7lfkgowgNJ6r9sM.jpg" 
+  <img src="https://img.freepik.com/free-vector/hand-painted-watercolour-leaves-border-design_1048-19987.jpg" 
        alt="Library Logo" 
        style="position: absolute; width: 800px; height: auto; z-index: 1; max-width: 100%;">
 
