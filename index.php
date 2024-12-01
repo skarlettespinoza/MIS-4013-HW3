@@ -2,7 +2,6 @@
 $pageTitle = "Home";
 include "view-header.php";
 ?>
-<h1 style="text-align: center;">My Book Nook</h1>
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center;">
   <h2>About <span style="font-style: italic; font-weight: bold;">My Book Nook</span></h2>
   <p style="max-width: 600px;">
