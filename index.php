@@ -2,8 +2,14 @@
 $pageTitle = "Home";
 include "view-header.php";
 ?>
-<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center;">
-  <div style="border: 2px solid rgba(255, 105, 180, 1); border-radius: 15px; padding: 20px; background-color: rgba(255, 182, 193, 0.2); max-width: 650px;">
+<div style="position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
+  <!-- Image Layer -->
+  <img src="https://i2.pngimg.me/thumb/f/720/m2i8H7m2G6b1i8A0.jpg" 
+       alt="Library Logo" 
+       style="position: absolute; width: 700px; height: auto; z-index: 1; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+       
+  <!-- About Section -->
+  <div style="position: relative; z-index: 2; border: 2px solid rgba(255, 105, 180, 1); border-radius: 15px; padding: 20px; background-color: rgba(255, 182, 193, 0.2); max-width: 650px; margin-top: 20px;">
     <h2>About <span style="font-style: italic; font-weight: bold;">My Book Nook</span></h2>
     <p style="max-width: 600px; margin: 0;">
       Welcome to <span style="font-style: italic; font-weight: bold;">My Book Nook</span>, your personal digital library where your literary world comes to life! 
