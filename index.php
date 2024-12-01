@@ -4,7 +4,7 @@ include "view-header.php";
 ?>
 <div style="position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
   <!-- Image Layer -->
-  <img src="https://i2.pngimg.me/thumb/f/720/m2i8H7m2G6b1i8A0.jpg" 
+  <img src="https://www.onlygfx.com/wp-content/uploads/2018/01/colorful-flower-frame-rectangle-2-1024x713.png" 
        alt="Library Logo" 
        style="position: absolute; width: 700px; height: auto; z-index: 1; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
        
