@@ -6,8 +6,8 @@ include "view-header.php";
   <!-- Image Layer -->
   <img src="https://i0.wp.com/www.onlygfx.com/wp-content/uploads/2017/08/flower-floral-frame-2.jpg?ssl=1" 
        alt="Library Logo" 
-       style="position: absolute; width: 700px; height: auto; z-index: 1; border-radius: 15px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
-       
+       style="position: absolute; width: 800px; height: auto; z-index: 1; max-width: 100%;">
+
   <!-- About Section -->
   <div style="position: relative; z-index: 2; border: 2px solid rgba(255, 105, 180, 1); border-radius: 15px; padding: 20px; background-color: rgba(255, 182, 193, 0.2); max-width: 650px; margin-top: 20px;">
     <h2>About <span style="font-style: italic; font-weight: bold;">My Book Nook</span></h2>
