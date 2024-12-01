@@ -22,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 while ($book = $books->fetch_assoc()) {
 ?>
   <tr>
-    <td><?php echo $book["genre"]; ?></td>
     <td><?php echo $book["title"]; ?></td>
     <td><?php echo $book["book_series"]; ?></td>
   </tr>
