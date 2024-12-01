@@ -4,7 +4,7 @@ include "view-header.php";
 ?>
 <div style="position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
   <!-- Image Layer -->
-  <img src="https://static.vecteezy.com/system/resources/thumbnails/026/647/409/small_2x/frame-with-red-and-pink-flowers-and-golden-texture-hand-drawn-watercolor-illustration-of-rectangular-border-for-wedding-invitations-or-greeting-cards-drawing-of-floral-backdrop-with-orange-plants-vector.jpg" 
+  <img src="https://i.etsystatic.com/14097811/r/il/0fc558/2196796149/il_570xN.2196796149_9fab.jpg" 
        alt="Library Logo" 
        style="position: absolute; width: 800px; height: auto; z-index: 1; max-width: 100%;">
 
