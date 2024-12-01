@@ -1,7 +1,6 @@
 <h1>Authors Chart</h1>
-<div style="max-width: 600px; margin: auto;">
-  <!-- Set max-width to control chart size -->
-  <canvas id="myChart" style="width:100%; height:300px;"></canvas>
+<div style="max-width: 800px; margin: auto;"> <!-- Increased max-width to 800px -->
+  <canvas id="myChart" style="width:100%; height:400px;"></canvas> <!-- Increased height to 400px -->
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
