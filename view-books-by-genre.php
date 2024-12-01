@@ -8,12 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-<h1>Books in Genre: <?php echo $genre_name; ?></h1>
+<h1>Books in <?php echo $genre_name; ?></h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
       <tr>
-        <th>Genre</th>
         <th>Title</th>
         <th>Book Series</th>
       </tr>
