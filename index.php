@@ -4,7 +4,7 @@ include "view-header.php";
 ?>
 <div style="position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center;">
   <!-- Image Layer -->
-  <img src="https://t3.ftcdn.net/jpg/05/12/74/58/360_F_512745856_cDRWteYHp9GBIAz3SBpmlVq929fjRGWx.jpg" 
+  <img src="https://static.vecteezy.com/system/resources/previews/021/813/455/non_2x/rectangle-lavender-floral-frame-botanical-flower-border-illustration-simple-elegant-romantic-style-for-wedding-events-signs-logo-labels-social-media-posts-etc-vector.jpg" 
        alt="Library Logo" 
        style="position: absolute; width: 800px; height: auto; z-index: 1; max-width: 100%;">
 
