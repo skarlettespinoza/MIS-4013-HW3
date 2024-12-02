@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Author's books with genres</h1>
+      <h1>Books</h1>
     </div>
     <div class="col-auto">  
       <?php include "view-authors-with-genres-newform.php"; ?>
