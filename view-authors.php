@@ -9,12 +9,12 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f8f9fa;
-      margin: 0; /* Removes margin from the body */
+      margin: 0; /* Remove body margin */
+      padding: 0;
     }
 
     .container {
       max-width: 1200px;
-      margin: 0 auto; /* Removes additional vertical space */
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
@@ -24,11 +24,7 @@
     h1 {
       font-size: 32px;
       color: #333;
-      margin-bottom: 20px;
-    }
-
-    .row {
-      margin-bottom: 20px;
+      margin: 0 0 20px; /* Remove top margin */
     }
 
     .table-responsive {
