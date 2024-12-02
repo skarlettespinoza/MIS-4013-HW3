@@ -6,6 +6,8 @@
     <title><?=$pageTitle?></title>
     <!-- Link to Bootswatch Minty theme -->
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/minty/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to Baguette Script font -->
+    <link href="https://fonts.googleapis.com/css2?family=Baguette+Script&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Navbar with the primary color from the Minty theme -->
@@ -16,7 +18,7 @@
           <img src="https://static.vecteezy.com/system/resources/previews/025/775/184/non_2x/books-stacks-and-piles-for-study-ai-generative-free-png.png" 
                alt="Books Logo" 
                style="width: 40px; height: 40px;">
-          <span style="font-size: 1.5rem; font-weight: bold; margin-right: 10px;">My Book Nook</span>          
+          <span style="font-size: 1.5rem; font-weight: bold; margin-right: 10px; font-family: 'Baguette Script', cursive;">My Book Nook</span>          
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
