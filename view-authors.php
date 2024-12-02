@@ -11,14 +11,15 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff; /* Keeping the body background white */
+      background-color: #fff; /* Set the body background color to white */
+      margin-bottom: 0; /* Remove any default margin at the bottom */
     }
 
     .container {
       max-width: 1200px;
-      margin: 30px auto;
+      margin: 0 auto; /* Ensure the container is centered */
       padding: 20px;
-      background-color: #fff;
+      background-color: #fff; /* Set the container background color to white */
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -41,6 +42,7 @@
       width: 100%;
       border-collapse: collapse;
       text-align: center;
+      background-color: #fff; /* Set the table background color to white */
     }
 
     th {
@@ -125,7 +127,6 @@
   </style>
 </head>
 <body>
-
 
   <div class="container my-4">
     <div class="row justify-content-between align-items-center">
