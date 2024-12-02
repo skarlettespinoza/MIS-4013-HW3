@@ -8,8 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/minty/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <!-- Navbar with the primary color from the Minty theme -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary container-fluid">
+    <!-- Navbar with custom color -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #f72f97;">
       <div class="container-fluid">
         <!-- Website title with the image as the logo -->
         <a class="navbar-brand d-flex align-items-center" href="/">
