@@ -8,28 +8,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-<h1>Books by <?php echo $publisher_name; ?></h1>
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Book Series</th>
-        <th>Publication Date</th>
-      </tr>
-    </thead>
-    <tbody>
-<?php
-while ($book = $books->fetch_assoc()) {
-?>
-  <tr>
-    <td><?php echo $book["title"]; ?></td>
-    <td><?php echo $book["book_series"]; ?></td>
-    <td><?php echo $book["publication_date"]; ?></td>
-  </tr>
-<?php
-}
-?>
-    </tbody>
-  </table>
+<div class="container my-4">
+  <h1 class="text-center">Books by <?php echo $publisher_name; ?></h1>
+
+  <div class="table-responsive mt-4">
+    <table class="table table-bordered table-hover text-center">
+      <thead class="thead-light">
+        <tr>
+          <th>Title</th>
+          <th>Book Series</th>
+          <th>Publication Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php while ($book = $books->fetch_assoc()) { ?>
+          <tr>
+            <td><?php echo $book["title"]; ?></td>
+            <td><?php echo $book["book_series"]; ?></td>
+            <td><?php echo $book["publication_date"]; ?></td>
+          </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+  </div>
 </div>
