@@ -126,12 +126,6 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Author Management</a>
-    </div>
-  </nav>
 
   <div class="container my-4">
     <div class="row justify-content-between align-items-center">
