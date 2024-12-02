@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?=$pageTitle?></title>
-    <!-- Link to Bootswatch Minty theme -->
-    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/minty/bootstrap.min.css" rel="stylesheet">
+    <!-- Link to Bootswatch Quartz theme -->
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/quartz/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <!-- Navbar with the primary color from the Minty theme -->
+    <!-- Navbar with the primary color from the Quartz theme -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary container-fluid">
       <div class="container-fluid">
         <!-- Website title with the image as the logo -->
