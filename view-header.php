@@ -1,7 +1,3 @@
-Share
-
-
-You said:
 <!doctype html>
 <html lang="en">
   <head>
