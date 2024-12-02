@@ -36,7 +36,7 @@
               <a class="nav-link" href="publishers.php">Publishers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="authors-with-genres.php">Authors with genres</a>
+              <a class="nav-link" href="authors-with-genres.php">Books</a>
             </li>      
             <li class="nav-item">
               <a class="nav-link" href="authors-chart.php">Authors Chart</a>
