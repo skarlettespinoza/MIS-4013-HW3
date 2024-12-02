@@ -9,11 +9,12 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f8f9fa;
+      margin: 0; /* Removes margin from the body */
     }
 
     .container {
       max-width: 1200px;
-      margin: 30px auto;
+      margin: 0 auto; /* Removes additional vertical space */
       padding: 20px;
       background-color: #fff;
       border-radius: 8px;
