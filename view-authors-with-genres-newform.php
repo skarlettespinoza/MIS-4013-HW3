@@ -58,7 +58,7 @@
           </div>           
           <input type="hidden" name="actionType" value="Add">
           <!-- Left-aligned Save Button -->
-          <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save</button>
+          <button type="submit" class="btn btn-custom-pink">Save</button>
         </form>
       </div>
     </div>
@@ -68,7 +68,7 @@
 <!-- CSS -->
 <style>
   .btn-custom-pink {
-    background-color: #ff69b4; /* Custom pink shade */
+    background-color: #f72f97; /* Custom pink shade */
     color: white;
     border: none;
   }
@@ -83,9 +83,13 @@
     display: block; /* Make labels occupy full width for proper alignment */
   }
 
-  /* Align Save button to the left and keep it same size */
-  .text-start {
-    display: block;
-    text-align: left;
+  /* Ensure the button is left-aligned */
+  .modal-body form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modal-body form button {
+    align-self: flex-start; /* Align the button to the left */
   }
 </style>
