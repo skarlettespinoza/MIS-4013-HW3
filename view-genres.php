@@ -1,6 +1,6 @@
 <div class="container my-5">
   <div class="d-flex justify-content-between align-items-center mb-4">
-    <h1 class="text-center mb-0">Genres</h1>
+    <h1 class="fw-bold text-center mb-0">Genres</h1>
     <?php include "view-genres-newform.php"; ?>
   </div>
 
