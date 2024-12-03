@@ -22,11 +22,11 @@
           </div>
           <div class="mb-3">
             <label for="aBirthdate" class="form-label">Author Birthdate</label>
-            <input type="date" class="form-control" id="aBirthdate" name="aBirthdate" required>
+            <input type="date" class="form-control" id="aBirthdate" name="aBirthdate" onchange="calculateAge()" >
           </div>
           <div class="mb-3">
             <label for="aAge" class="form-label">Author Age</label>
-            <input type="number" class="form-control" id="aAge" name="aAge" required>
+            <input type="number" class="form-control" id="aAge" name="aAge" required readonly>
           </div>
           <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save</button>
@@ -35,3 +35,22 @@
     </div>
   </div>
 </div>
+
+<!-- Add this JavaScript function -->
+<script>
+  function calculateAge() {
+    var birthdate = document.getElementById('aBirthdate').value;
+    if (birthdate) {
+      var birthDate = new Date(birthdate);
+      var today = new Date();
+      var age = today.getFullYear() - birthDate.getFullYear();
+      var month = today.getMonth() - birthDate.getMonth();
+      if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      document.getElementById('aAge').value = age;
+    } else {
+      document.getElementById('aAge').value = '';  // Clear age if no birthdate is provided
+    }
+  }
+</script>
