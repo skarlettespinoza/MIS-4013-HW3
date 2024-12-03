@@ -75,4 +75,9 @@
     background-color: #ff85c1; /* Slightly lighter pink on hover */
     color: white;
   }
+
+  .form-label {
+    text-align: left; /* Ensure labels are left-aligned */
+    display: block; /* Make labels occupy full width for proper alignment */
+  }
 </style>
