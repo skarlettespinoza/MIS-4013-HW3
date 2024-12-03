@@ -26,7 +26,7 @@
           </div>
             <input type="hidden" name="pid" value="<?php echo $publisher['publisher_id'];?>">
             <input type="hidden" name="actionType" value="Edit">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save Changes</button>
         </form>
       </div>
     </div>
