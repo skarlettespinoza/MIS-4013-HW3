@@ -8,41 +8,41 @@
 
 <!-- Modal -->
 <div class="modal fade" id="newBookModal" tabindex="-1" aria-labelledby="newBookModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="newBookModalLabel">New book</h1>
+        <h5 class="modal-title fs-5" id="newBookModalLabel">New Book</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
             <label for="iid" class="form-label">Author</label>
-<?php
-$authorsList = selectAuthorsForInput();
-$selectedAuthors=0;
-include "view-authors-input-list.php"
-?>
+            <?php
+            $authorsList = selectAuthorsForInput();
+            $selectedAuthors = 0;
+            include "view-authors-input-list.php";
+            ?>
           </div>
           <div class="mb-3">
             <label for="gid" class="form-label">Genre</label>
-<?php
-$genresList = selectGenresForInput();
-$selectedGenres=0;
-include "view-genres-input-list.php"
-?>
+            <?php
+            $genresList = selectGenresForInput();
+            $selectedGenres = 0;
+            include "view-genres-input-list.php";
+            ?>
           </div>
           <div class="mb-3">
             <label for="pid" class="form-label">Publisher</label>
-<?php
-$publishersList = selectPublishersForInput();
-$selectedPublishers=0;
-include "view-publishers-input-list.php"
-?>         
+            <?php
+            $publishersList = selectPublishersForInput();
+            $selectedPublishers = 0;
+            include "view-publishers-input-list.php";
+            ?>         
           </div>
           <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" name="title">
+            <input type="text" class="form-control" id="title" name="title" required>
           </div>    
           <div class="mb-3">
             <label for="book_series" class="form-label">Book Series</label>
@@ -50,14 +50,14 @@ include "view-publishers-input-list.php"
           </div>    
           <div class="mb-3">
             <label for="publication_date" class="form-label">Publication Date</label>
-            <input type="text" class="form-control" id="publication_date" name="publication_date">
+            <input type="date" class="form-control" id="publication_date" name="publication_date">
           </div>  
           <div class="mb-3">
             <label for="review" class="form-label">Review</label>
-            <input type="text" class="form-control" id="review" name="review">
+            <textarea class="form-control" id="review" name="review" rows="3"></textarea>
           </div>           
-            <input type="hidden" name="actionType" value="Add">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <input type="hidden" name="actionType" value="Add">
+          <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save</button>
         </form>
       </div>
     </div>
