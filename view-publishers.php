@@ -39,7 +39,7 @@
                 <input type="hidden" name="pid" value="<?php echo $publisher["publisher_id"]; ?>">
                 <input type="hidden" name="publisher_name" value="<?php echo htmlspecialchars($publisher["publisher_name"]); ?>">
                 <button type="submit" class="btn btn-sm" style="background-color: #f72f97; border-color: #f72f97;">
-                  <i class="bi bi-book"></i> Books
+                  <i class="bi bi-book"></i> View Books
                 </button>
               </form>
             </td>
