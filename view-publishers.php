@@ -49,3 +49,53 @@
     </table>
   </div>
 </div>
+
+<!-- CSS to make the delete buttons consistent -->
+<style>
+  /* General Button Styling for Delete */
+  .btn-danger {
+    background-color: #dc3545; /* Red color for delete buttons */
+    border-color: #dc3545;
+    color: white; /* Ensures text is visible */
+  }
+
+  .btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+    border-color: #bd2130;
+  }
+
+  /* Publisher Button Styling */
+  .btn-sm {
+    font-size: 0.875rem;
+  }
+
+  .btn-sm:hover {
+    text-decoration: none;
+  }
+
+  /* Table Styling */
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+  }
+
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .table-light th {
+    background-color: #f8f9fa;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .table-responsive {
+      overflow-x: auto;
+    }
+  }
+</style>
