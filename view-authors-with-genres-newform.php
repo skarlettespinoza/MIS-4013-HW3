@@ -57,13 +57,17 @@
             <input type="text" class="form-control" id="review" name="review">
           </div>           
           <input type="hidden" name="actionType" value="Add">
-          <button type="submit" class="btn btn-custom-pink">Save</button>
+          <!-- Left-aligned Save Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-custom-pink text-start">Save</button>
+          </div>
         </form>
       </div>
     </div>
   </div>
 </div>
 
+<!-- CSS -->
 <style>
   .btn-custom-pink {
     background-color: #ff69b4; /* Custom pink shade */
@@ -79,5 +83,10 @@
   .form-label {
     text-align: left; /* Ensure labels are left-aligned */
     display: block; /* Make labels occupy full width for proper alignment */
+  }
+
+  /* Ensure the Save button is aligned to the left */
+  .d-grid {
+    text-align: left; /* Align button to the left */
   }
 </style>
