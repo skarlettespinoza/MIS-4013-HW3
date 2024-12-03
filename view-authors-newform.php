@@ -36,21 +36,27 @@
   </div>
 </div>
 
-<!-- Add this JavaScript function -->
+<!-- JavaScript function to calculate age -->
 <script>
   function calculateAge() {
     var birthdate = document.getElementById('aBirthdate').value;
+    var ageInput = document.getElementById('aAge');
+    
     if (birthdate) {
       var birthDate = new Date(birthdate);
       var today = new Date();
       var age = today.getFullYear() - birthDate.getFullYear();
       var month = today.getMonth() - birthDate.getMonth();
+      
       if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
         age--;
       }
-      document.getElementById('aAge').value = age;
+      
+      // Update the age field with the calculated age
+      ageInput.value = age;
     } else {
-      document.getElementById('aAge').value = '';  // Clear age if no birthdate is provided
+      // If no birthdate is provided, clear the age field
+      ageInput.value = '';
     }
   }
 </script>
