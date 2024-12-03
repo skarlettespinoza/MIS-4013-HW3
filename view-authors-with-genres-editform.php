@@ -59,7 +59,7 @@
             <input type="hidden" name="bid" value="<?php echo $genre['book_id']; ?>">          
             <input type="hidden" name="actionType" value="Edit">
           <div class="text-start">
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save Changes</button>
           </div>
         </form>
       </div>
