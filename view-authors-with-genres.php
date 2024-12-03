@@ -94,16 +94,18 @@
     border: 1px solid #e0e0e0;
   }
 
-  /* Buttons */
+  /* Delete Button Styling (Matches Below) */
   .btn-danger {
-    background-color: #dc3545; /* Matches Delete button below */
+    background-color: #dc3545; /* Consistent delete button color */
     border-color: #dc3545;
   }
 
   .btn-danger:hover {
-    background-color: #c82333; /* Matches Delete button below hover */
+    background-color: #c82333;
     border-color: #bd2130;
   }
+
+
 
   /* Responsive Adjustments */
   @media (max-width: 768px) {
