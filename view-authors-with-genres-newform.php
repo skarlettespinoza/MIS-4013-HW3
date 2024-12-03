@@ -58,9 +58,7 @@
           </div>           
           <input type="hidden" name="actionType" value="Add">
           <!-- Left-aligned Save Button -->
-          <div class="d-grid">
-            <button type="submit" class="btn btn-custom-pink text-start">Save</button>
-          </div>
+          <button type="submit" class="btn btn-custom-pink text-start">Save</button>
         </form>
       </div>
     </div>
@@ -85,8 +83,9 @@
     display: block; /* Make labels occupy full width for proper alignment */
   }
 
-  /* Ensure the Save button is aligned to the left */
-  .d-grid {
-    text-align: left; /* Align button to the left */
+  /* Align Save button to the left and keep it same size */
+  .text-start {
+    display: block;
+    text-align: left;
   }
 </style>
