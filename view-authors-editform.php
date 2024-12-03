@@ -22,7 +22,7 @@
           </div>
           <div class="mb-3">
             <label for="aBirthdate<?php echo $author['author_id']; ?>" class="form-label" style="text-align: left;">Author Birthdate</label>
-            <input type="date" class="form-control" id="aBirthdate<?php echo $author['author_id']; ?>" name="aBirthdate" value="<?php echo htmlspecialchars($author['author_birthdate']); ?>" required>
+            <input type="date" class="form-control" id="aBirthdate<?php echo $author['author_id']; ?>" name="aBirthdate" value="<?php echo $author['author_birthdate'] ? htmlspecialchars($author['author_birthdate']) : ''; ?>">
           </div>
           <div class="mb-3">
             <label for="aAge<?php echo $author['author_id']; ?>" class="form-label" style="text-align: left;">Author Age</label>
