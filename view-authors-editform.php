@@ -28,9 +28,9 @@
             <label for="aAge<?php echo $author['author_id']; ?>" class="form-label text-start">Author Age</label>
             <input type="number" class="form-control" id="aAge<?php echo $author['author_id']; ?>" name="aAge" value="<?php echo $author['author_age']; ?>">
           </div>
-            <input type="hidden" name="aid" value="<?php echo $author['author_id']; ?>">
-            <input type="hidden" name="actionType" value="Edit">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <input type="hidden" name="aid" value="<?php echo $author['author_id']; ?>">
+          <input type="hidden" name="actionType" value="Edit">
+          <button type="submit" class="btn btn-primary w-100">Save</button>
         </form>
       </div>
     </div>
