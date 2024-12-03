@@ -17,15 +17,15 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="aName<?php echo $author['author_id']; ?>" class="form-label">Author Name</label>
+            <label for="aName<?php echo $author['author_id']; ?>" class="form-label" style="text-align: left;">Author Name</label>
             <input type="text" class="form-control" id="aName<?php echo $author['author_id']; ?>" name="aName" value="<?php echo htmlspecialchars($author['author_name']); ?>" required>
           </div>
           <div class="mb-3">
-            <label for="aBirthdate<?php echo $author['author_id']; ?>" class="form-label">Author Birthdate</label>
+            <label for="aBirthdate<?php echo $author['author_id']; ?>" class="form-label" style="text-align: left;">Author Birthdate</label>
             <input type="date" class="form-control" id="aBirthdate<?php echo $author['author_id']; ?>" name="aBirthdate" value="<?php echo htmlspecialchars($author['author_birthdate']); ?>" required>
           </div>
           <div class="mb-3">
-            <label for="aAge<?php echo $author['author_id']; ?>" class="form-label">Author Age</label>
+            <label for="aAge<?php echo $author['author_id']; ?>" class="form-label" style="text-align: left;">Author Age</label>
             <input type="number" class="form-control" id="aAge<?php echo $author['author_id']; ?>" name="aAge" value="<?php echo $author['author_age']; ?>" required>
           </div>
           <input type="hidden" name="aid" value="<?php echo $author['author_id']; ?>">
