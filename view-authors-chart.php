@@ -1,4 +1,4 @@
-<h1>Authors Chart</h1>
+<h1 class="fw-bold text-center mb-0">Authors Chart</h1>
 <div style="max-width: 800px; margin: auto;"> <!-- Increased max-width to 800px -->
   <canvas id="myChart" style="width:100%; height:500px;"></canvas> <!-- Increased height to 500px -->
 </div>
