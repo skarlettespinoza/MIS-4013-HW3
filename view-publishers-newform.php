@@ -25,7 +25,7 @@
             <input type="text" class="form-control" id="pLoc" name="pLoc">
           </div>
             <input type="hidden" name="actionType" value="Add">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save</button>
         </form>
       </div>
     </div>
