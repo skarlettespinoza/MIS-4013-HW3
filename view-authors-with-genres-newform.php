@@ -58,7 +58,7 @@
           </div>           
           <input type="hidden" name="actionType" value="Add">
           <!-- Left-aligned Save Button -->
-          <button type="submit" class="btn btn-custom-pink text-start">Save</button>
+          <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save</button>
         </form>
       </div>
     </div>
