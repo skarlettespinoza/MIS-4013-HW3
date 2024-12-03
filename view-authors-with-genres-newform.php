@@ -17,7 +17,7 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="iid" class="form-label text-start d-block">Author</label>
+            <label for="iid" class="form-label">Author</label>
             <?php
             $authorsList = selectAuthorsForInput();
             $selectedAuthors = 0;
@@ -25,7 +25,7 @@
             ?>
           </div>
           <div class="mb-3">
-            <label for="gid" class="form-label text-start d-block">Genre</label>
+            <label for="gid" class="form-label">Genre</label>
             <?php
             $genresList = selectGenresForInput();
             $selectedGenres = 0;
@@ -33,7 +33,7 @@
             ?>
           </div>
           <div class="mb-3">
-            <label for="pid" class="form-label text-start d-block">Publisher</label>
+            <label for="pid" class="form-label">Publisher</label>
             <?php
             $publishersList = selectPublishersForInput();
             $selectedPublishers = 0;
@@ -41,25 +41,38 @@
             ?>         
           </div>
           <div class="mb-3">
-            <label for="title" class="form-label text-start d-block">Title</label>
+            <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control" id="title" name="title">
           </div>    
           <div class="mb-3">
-            <label for="book_series" class="form-label text-start d-block">Book Series</label>
+            <label for="book_series" class="form-label">Book Series</label>
             <input type="text" class="form-control" id="book_series" name="book_series">
           </div>    
           <div class="mb-3">
-            <label for="publication_date" class="form-label text-start d-block">Publication Date</label>
-            <input type="text" class="form-control" id="publication_date" name="publication_date">
+            <label for="publication_date" class="form-label">Publication Date</label>
+            <input type="date" class="form-control" id="publication_date" name="publication_date">
           </div>  
           <div class="mb-3">
-            <label for="review" class="form-label text-start d-block">Review</label>
+            <label for="review" class="form-label">Review</label>
             <input type="text" class="form-control" id="review" name="review">
           </div>           
           <input type="hidden" name="actionType" value="Add">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-custom-pink">Save</button>
         </form>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .btn-custom-pink {
+    background-color: #ff69b4; /* Custom pink shade */
+    color: white;
+    border: none;
+  }
+
+  .btn-custom-pink:hover {
+    background-color: #ff85c1; /* Slightly lighter pink on hover */
+    color: white;
+  }
+</style>
