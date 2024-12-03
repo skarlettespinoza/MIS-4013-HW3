@@ -40,7 +40,7 @@
                 </button>
               </form>
             </td>
-            <td><a href="genre-by-author.php?id=<?php echo $author["author_id"]; ?>" class="btn btn-info btn-sm">Genre</a></td>
+            <td><a href="genre-by-author.php?id=<?php echo $author["author_id"]; ?>" class="btn btn-secondary btn-sm">Genre</a></td>
           </tr>
         <?php } ?>
       </tbody>
