@@ -1,68 +1,114 @@
-<div class="container">
-  <div class="row align-items-center">
+<div class="container py-5">
+  <div class="row mb-4">
     <div class="col">
-      <h1 class="text-primary">Books</h1>
+      <h1 class="fw-bold text-center">Books by Authors</h1>
     </div>
-    <div class="col-auto">
+    <div class="col-auto text-end">
       <?php include "view-authors-with-genres-newform.php"; ?>
     </div>
   </div>
 
   <div class="card-group flex-column w-100">
-    <?php
-      // Fetch authors
-      while ($author = $authors->fetch_assoc()) {
-    ?>
-      <!-- Author's Main Card -->
-      <div class="card w-100 mb-4 border-0" style="background-color: #f8f9fa; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <?php while ($author = $authors->fetch_assoc()) { ?>
+      <!-- Author Card -->
+      <div class="card w-100 mb-4 shadow-sm border-0">
+        <div class="card-header bg-primary text-white">
+          <h4 class="mb-0"><?php echo htmlspecialchars($author["author_name"]); ?></h4>
+        </div>
         <div class="card-body">
-          <h5 class="card-title text-primary"><?php echo $author["author_name"]; ?></h5>
-          <p class="card-text"><small class="text-muted">Author Birthdate: <?php echo $author["author_birthdate"]; ?></small></p>
+          <p class="mb-3">
+            <strong>Birthdate:</strong> <?php echo htmlspecialchars($author["author_birthdate"]); ?>
+          </p>
 
+          <!-- Books Section -->
           <?php
-            $genres = selectGenresByAuthor($author["author_id"]);
+          $genres = selectGenresByAuthor($author["author_id"]);
+          if ($genres->num_rows > 0) {
             while ($genre = $genres->fetch_assoc()) {
           ?>
-            <!-- Book Card -->
-            <div class="card w-100 mb-3 border-0" style="background-color: #ffffff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
-              <div class="card-body">
-                <p><strong>Genre:</strong> <?php echo $genre["genre"]; ?></p>
-                <p><strong>Title:</strong> <?php echo $genre["title"]; ?></p>
-                <p><strong>Book Series:</strong> <?php echo $genre["book_series"]; ?></p>
-                <p><strong>Publication Date:</strong> <?php echo $genre["publication_date"]; ?></p>
-                <p><strong>Review:</strong></p>
-                <div class="scrollable-review bg-light p-2 rounded">
-                  <p><?php echo $genre["review"]; ?></p>
+              <!-- Book Card -->
+              <div class="card mb-3 border-0">
+                <div class="card-body border rounded">
+                  <p><strong>Genre:</strong> <?php echo htmlspecialchars($genre["genre"]); ?></p>
+                  <p><strong>Title:</strong> <?php echo htmlspecialchars($genre["title"]); ?></p>
+                  <p><strong>Book Series:</strong> <?php echo htmlspecialchars($genre["book_series"]); ?></p>
+                  <p><strong>Publication Date:</strong> <?php echo htmlspecialchars($genre["publication_date"]); ?></p>
+                  <div class="scrollable-review bg-light p-2 rounded">
+                    <p><strong>Review:</strong> <?php echo htmlspecialchars($genre["review"]); ?></p>
+                  </div>
+
+                  <!-- Action Buttons -->
+                  <div class="mt-3">
+                    <?php include "view-authors-with-genres-editform.php"; ?>
+                    <form method="post" action="" class="d-inline-block">
+                      <input type="hidden" name="bid" value="<?php echo htmlspecialchars($genre["book_id"]); ?>">
+                      <input type="hidden" name="actionType" value="Delete">
+                      <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this book?');">
+                        <i class="bi bi-trash3"></i> Delete
+                      </button>
+                    </form>
+                  </div>
                 </div>
-                <p><?php include "view-authors-with-genres-editform.php"; ?></p>
-                <p>
-                  <form method="post" action="">
-                    <input type="hidden" name="bid" value="<?php echo $genre["book_id"]; ?>">
-                    <input type="hidden" name="actionType" value="Delete">
-                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?');">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                      </svg>
-                    </button>
-                  </form>
-                </p>
               </div>
-            </div>
-          <?php } ?>
+              <!-- End of Book Card -->
+          <?php
+            }
+          } else {
+            echo "<p class='text-muted'>No books found for this author.</p>";
+          }
+          ?>
         </div>
       </div>
+      <!-- End of Author Card -->
     <?php } ?>
   </div>
 </div>
 
 <style>
-  .card-group {
-    display: flex;
-    flex-direction: column;
+  /* General Card Styling */
+  .card {
+    border-radius: 8px;
+    background-color: #fff;
   }
+
+  /* Author Card Styling */
+  .card-header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    border-bottom: 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  /* Book Card Styling */
   .scrollable-review {
-    max-height: 150px;
+    max-height: 100px;
     overflow-y: auto;
-    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+  }
+
+  /* Buttons */
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .card-body {
+      padding: 1rem;
+    }
   }
 </style>
