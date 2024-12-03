@@ -8,28 +8,28 @@
 
 <!-- Modal -->
 <div class="modal fade" id="newAuthorModal" tabindex="-1" aria-labelledby="newAuthorModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="newAuthorModalLabel">New author</h1>
+        <h5 class="modal-title fs-5" id="newAuthorModalLabel">New Author</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="aName" class="form-label">Author name</label>
-            <input type="text" class="form-control" id="aName" name="aName">
+            <label for="aName" class="form-label">Author Name</label>
+            <input type="text" class="form-control" id="aName" name="aName" required>
           </div>
           <div class="mb-3">
-            <label for="aBirthdate" class="form-label">Author birthdate</label>
-            <input type="text" class="form-control" id="aBirthdate" name="aBirthdate">
+            <label for="aBirthdate" class="form-label">Author Birthdate</label>
+            <input type="date" class="form-control" id="aBirthdate" name="aBirthdate" required>
           </div>
           <div class="mb-3">
-            <label for="aAge" class="form-label">Author age</label>
-            <input type="number" class="form-control" id="aAge" name="aAge">
+            <label for="aAge" class="form-label">Author Age</label>
+            <input type="number" class="form-control" id="aAge" name="aAge" required>
           </div>
-            <input type="hidden" name="actionType" value="Add">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <input type="hidden" name="actionType" value="Add">
+          <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save</button>
         </form>
       </div>
     </div>
