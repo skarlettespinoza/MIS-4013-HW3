@@ -1,21 +1,23 @@
-<div class="container my-4">
-  <h1 class="text-center">Genres</h1>
-  
-  <div class="table-responsive mt-4">
-    <table class="table table-bordered table-hover text-center">
-      <thead class="thead-light">
+<div class="container py-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="fw-bold text-center mb-0">Genres</h1>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover text-center align-middle">
+      <thead class="table-light">
         <tr>
-          <th>Genre</th>
-          <th>Title</th>
-          <th>Book Series</th>
+          <th scope="col">Genre</th>
+          <th scope="col">Title</th>
+          <th scope="col">Book Series</th>
         </tr>
       </thead>
       <tbody>
         <?php while ($genre = $genres->fetch_assoc()) { ?>
           <tr>
-            <td><?php echo $genre["genre"]; ?></td>
-            <td><?php echo $genre["title"]; ?></td>
-            <td><?php echo $genre["book_series"]; ?></td>
+            <td class="fw-bold"><?php echo htmlspecialchars($genre["genre"]); ?></td>
+            <td><?php echo htmlspecialchars($genre["title"]); ?></td>
+            <td><?php echo htmlspecialchars($genre["book_series"]); ?></td>
           </tr>
         <?php } ?>
       </tbody>
