@@ -55,47 +55,14 @@
   </div>
 </div>
 
-<!-- Scoped CSS -->
 <style>
-  /* Book Display Cards */
   .card-group {
     display: flex;
     flex-direction: column;
   }
-
-  .card-group .card {
-    background-color: #f8f9fa;
-    border: 0;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .card-group .card-body .scrollable-review {
+  .scrollable-review {
     max-height: 150px;
     overflow-y: auto;
     border: 1px solid #ddd;
-    background-color: #f8f9fa;
-    padding: 10px;
-    border-radius: 5px;
-  }
-
-  .card-group .btn-danger {
-    background-color: #f72f97;
-    border-color: #f72f97;
-  }
-
-  .card-group .btn-danger:hover {
-    background-color: #d82d84;
-    border-color: #d82d84;
-  }
-
-  /* Scoped Reset for Other Forms */
-  form {
-    margin: 0;
-    padding: 0;
-  }
-
-  form .form-group label {
-    font-weight: bold;
   }
 </style>
