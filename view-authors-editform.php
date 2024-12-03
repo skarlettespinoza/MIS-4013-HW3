@@ -8,29 +8,29 @@
 
 <!-- Modal -->
 <div class="modal fade" id="editAuthorModal<?php echo $author['author_id']; ?>" tabindex="-1" aria-labelledby="editAuthorModalLabel<?php echo $author['author_id']; ?>" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editAuthorModalLabel<?php echo $author['author_id']; ?>">Edit author</h1>
+        <h5 class="modal-title fs-5" id="editAuthorModalLabel<?php echo $author['author_id']; ?>">Edit Author</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="aName<?php echo $author['author_id']; ?>" class="form-label">Author name</label>
-            <input type="text" class="form-control" id="aName<?php echo $author['author_id']; ?>" name="aName" value="<?php echo $author['author_name']; ?>">
+            <label for="aName<?php echo $author['author_id']; ?>" class="form-label">Author Name</label>
+            <input type="text" class="form-control" id="aName<?php echo $author['author_id']; ?>" name="aName" value="<?php echo htmlspecialchars($author['author_name']); ?>" required>
           </div>
           <div class="mb-3">
-            <label for="aBirthdate<?php echo $author['author_id']; ?>" class="form-label">Author birthdate</label>
-            <input type="text" class="form-control" id="aBirthdate<?php echo $author['author_id']; ?>" name="aBirthdate" value="<?php echo $author['author_birthdate']; ?>">
+            <label for="aBirthdate<?php echo $author['author_id']; ?>" class="form-label">Author Birthdate</label>
+            <input type="date" class="form-control" id="aBirthdate<?php echo $author['author_id']; ?>" name="aBirthdate" value="<?php echo htmlspecialchars($author['author_birthdate']); ?>" required>
           </div>
           <div class="mb-3">
-            <label for="aAge<?php echo $author['author_id']; ?>" class="form-label">Author age</label>
-            <input type="number" class="form-control" id="aAge<?php echo $author['author_id']; ?>" name="aAge" value="<?php echo $author['author_age']; ?>">
+            <label for="aAge<?php echo $author['author_id']; ?>" class="form-label">Author Age</label>
+            <input type="number" class="form-control" id="aAge<?php echo $author['author_id']; ?>" name="aAge" value="<?php echo $author['author_age']; ?>" required>
           </div>
-            <input type="hidden" name="aid" value="<?php echo $author['author_id']; ?>">
-            <input type="hidden" name="actionType" value="Edit">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <input type="hidden" name="aid" value="<?php echo $author['author_id']; ?>">
+          <input type="hidden" name="actionType" value="Edit">
+          <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save Changes</button>
         </form>
       </div>
     </div>
