@@ -8,16 +8,16 @@
 
 <!-- Modal -->
 <div class="modal fade" id="newBookModal" tabindex="-1" aria-labelledby="newBookModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title fs-5" id="newBookModalLabel">New Book</h5>
+        <h1 class="modal-title fs-5" id="newBookModalLabel">New Book</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="iid" class="form-label">Author</label>
+            <label for="iid" class="form-label text-start d-block">Author</label>
             <?php
             $authorsList = selectAuthorsForInput();
             $selectedAuthors = 0;
@@ -25,7 +25,7 @@
             ?>
           </div>
           <div class="mb-3">
-            <label for="gid" class="form-label">Genre</label>
+            <label for="gid" class="form-label text-start d-block">Genre</label>
             <?php
             $genresList = selectGenresForInput();
             $selectedGenres = 0;
@@ -33,7 +33,7 @@
             ?>
           </div>
           <div class="mb-3">
-            <label for="pid" class="form-label">Publisher</label>
+            <label for="pid" class="form-label text-start d-block">Publisher</label>
             <?php
             $publishersList = selectPublishersForInput();
             $selectedPublishers = 0;
@@ -41,23 +41,23 @@
             ?>         
           </div>
           <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" name="title" required>
+            <label for="title" class="form-label text-start d-block">Title</label>
+            <input type="text" class="form-control" id="title" name="title">
           </div>    
           <div class="mb-3">
-            <label for="book_series" class="form-label">Book Series</label>
+            <label for="book_series" class="form-label text-start d-block">Book Series</label>
             <input type="text" class="form-control" id="book_series" name="book_series">
           </div>    
           <div class="mb-3">
-            <label for="publication_date" class="form-label">Publication Date</label>
-            <input type="date" class="form-control" id="publication_date" name="publication_date">
+            <label for="publication_date" class="form-label text-start d-block">Publication Date</label>
+            <input type="text" class="form-control" id="publication_date" name="publication_date">
           </div>  
           <div class="mb-3">
-            <label for="review" class="form-label">Review</label>
-            <textarea class="form-control" id="review" name="review" rows="3"></textarea>
+            <label for="review" class="form-label text-start d-block">Review</label>
+            <input type="text" class="form-control" id="review" name="review">
           </div>           
           <input type="hidden" name="actionType" value="Add">
-          <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save</button>
+          <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
     </div>
