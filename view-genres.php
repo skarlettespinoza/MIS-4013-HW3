@@ -40,7 +40,7 @@
               <form method="post" action="books-by-genre.php">
                 <input type="hidden" name="gid" value="<?php echo $genre["genre_id"]; ?>">
                 <input type="hidden" name="genre_name" value="<?php echo htmlspecialchars($genre["genre"]); ?>">
-                <button type="submit" class="btn btn-info btn-sm">Books</button>
+                <button type="submit" class="btn btn-secondary btn-sm">Books</button>
               </form>
             </td>
           </tr>
