@@ -22,7 +22,7 @@
           </div>
             <input type="hidden" name="gid" value="<?php echo $genre['genre_id']; ?>">
             <input type="hidden" name="actionType" value="Edit">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save Changes</button>
         </form>
       </div>
     </div>
