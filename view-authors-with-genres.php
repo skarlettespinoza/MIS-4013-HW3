@@ -1,7 +1,7 @@
 <div class="container py-5">
   <div class="row mb-4">
     <div class="col">
-      <h1 class="fw-bold text-center">Books by Authors</h1>
+      <h1 class="fw-bold text-center">My Books</h1>
     </div>
     <div class="col-auto text-end">
       <?php include "view-authors-with-genres-newform.php"; ?>
