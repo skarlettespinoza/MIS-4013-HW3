@@ -22,11 +22,11 @@
           </div>
           <div class="mb-3">
             <label for="aBirthdate<?php echo $author['author_id']; ?>" class="form-label" style="text-align: left;">Author Birthdate</label>
-            <input type="date" class="form-control" id="aBirthdate<?php echo $author['author_id']; ?>" name="aBirthdate" value="<?php echo htmlspecialchars($author['author_birthdate']); ?>" onchange="calculateAge('<?php echo $author['author_id']; ?>')">
+            <input type="date" class="form-control" id="aBirthdate<?php echo $author['author_id']; ?>" name="aBirthdate" value="<?php echo $author['author_birthdate'] ? htmlspecialchars($author['author_birthdate']) : ''; ?>">
           </div>
           <div class="mb-3">
             <label for="aAge<?php echo $author['author_id']; ?>" class="form-label" style="text-align: left;">Author Age</label>
-            <input type="number" class="form-control" id="aAge<?php echo $author['author_id']; ?>" name="aAge" value="<?php echo $author['author_age']; ?>" required readonly>
+            <input type="number" class="form-control" id="aAge<?php echo $author['author_id']; ?>" name="aAge" value="<?php echo $author['author_age']; ?>" required>
           </div>
           <input type="hidden" name="aid" value="<?php echo $author['author_id']; ?>">
           <input type="hidden" name="actionType" value="Edit">
@@ -36,22 +36,3 @@
     </div>
   </div>
 </div>
-
-<!-- Add this JavaScript function -->
-<script>
-  function calculateAge(authorId) {
-    var birthdate = document.getElementById('aBirthdate' + authorId).value;
-    if (birthdate) {
-      var birthDate = new Date(birthdate);
-      var today = new Date();
-      var age = today.getFullYear() - birthDate.getFullYear();
-      var month = today.getMonth() - birthDate.getMonth();
-      if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-      }
-      document.getElementById('aAge' + authorId).value = age;
-    } else {
-      document.getElementById('aAge' + authorId).value = '';
-    }
-  }
-</script>
