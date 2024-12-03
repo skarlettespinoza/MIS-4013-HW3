@@ -8,24 +8,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-<div class="container my-4">
-  <h1 class="text-center">Books by <?php echo $publisher_name; ?></h1>
+<div class="container py-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="fw-bold text-center mb-0">Books by <?php echo $publisher_name; ?></h1>
+  </div>
 
-  <div class="table-responsive mt-4">
-    <table class="table table-bordered table-hover text-center">
-      <thead class="thead-light">
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover text-center align-middle">
+      <thead class="table-light">
         <tr>
-          <th>Title</th>
-          <th>Book Series</th>
-          <th>Publication Date</th>
+          <th scope="col">Title</th>
+          <th scope="col">Book Series</th>
+          <th scope="col">Publication Date</th>
         </tr>
       </thead>
       <tbody>
         <?php while ($book = $books->fetch_assoc()) { ?>
           <tr>
-            <td><?php echo $book["title"]; ?></td>
-            <td><?php echo $book["book_series"]; ?></td>
-            <td><?php echo $book["publication_date"]; ?></td>
+            <td class="fw-bold"><?php echo htmlspecialchars($book["title"]); ?></td>
+            <td><?php echo htmlspecialchars($book["book_series"]); ?></td>
+            <td><?php echo htmlspecialchars($book["publication_date"]); ?></td>
           </tr>
         <?php } ?>
       </tbody>
