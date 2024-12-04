@@ -2,7 +2,7 @@
 function selectAuthors() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT author_id, author_name, author_birthdate, author_age FROM `author`");
+        $stmt = $conn->prepare("SELECT author_id, author_name, author_birthdate FROM `author`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,11 +13,11 @@ function selectAuthors() {
     }
 }
 
-function insertAuthors($aName, $aBirthdate, $aAge) {
+function insertAuthors($aName, $aBirthdate) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `author` (`author_name`,`author_birthdate`,`author_age`) VALUES (?, ?, ?)");
-        $stmt->bind_param("ssi", $aName, $aBirthdate, $aAge);
+        $stmt = $conn->prepare("INSERT INTO `author` (`author_name`,`author_birthdate`) VALUES (?, ?)");
+        $stmt->bind_param("ss", $aName, $aBirthdate);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertAuthors($aName, $aBirthdate, $aAge) {
     }
 }
 
-function updateAuthors($aName, $aBirthdate, $aAge, $aid) {
+function updateAuthors($aName, $aBirthdate, $aid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `author` set `author_name`=?,`author_birthdate`=?,`author_age`=? where author_id=?");
-        $stmt->bind_param("ssii", $aName, $aBirthdate, $aAge, $aid);
+        $stmt = $conn->prepare("update `author` set `author_name`=?,`author_birthdate`=? where author_id=?");
+        $stmt->bind_param("ssi", $aName, $aBirthdate, $aid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
