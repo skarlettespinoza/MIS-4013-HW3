@@ -22,7 +22,7 @@
           </div>
           <div class="mb-3">
             <label for="aBirthdate" class="form-label">Author Birthdate</label>
-            <input type="date" class="form-control" id="aBirthdate" name="aBirthdate" required>
+            <input type="date" class="form-control" id="aBirthdate" name="aBirthdate" >
           </div>
           <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save</button>
