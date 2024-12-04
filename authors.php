@@ -8,14 +8,14 @@ include "view-header.php";
 if (isset($_POST['actionType'])){
   switch ($_POST['actionType']) {
     case "Add":
-      if(insertAuthors($_POST['aName'],$_POST['aBirthdate'],$_POST['aAge'])) {
+      if(insertAuthors($_POST['aName'],$_POST['aBirthdate'])) {
         echo'<div class="alert alert-success" role="alert">Author added</div>';
       } else {
         echo'<div class="alert alert-danger" role="alert">Error</div>';
       }
       break;
     case "Edit":
-      if(updateAuthors($_POST['aName'],$_POST['aBirthdate'],$_POST['aAge'],$_POST['aid'])) {
+      if(updateAuthors($_POST['aName'],$_POST['aBirthdate'],$_POST['aid'])) {
         echo'<div class="alert alert-success" role="alert">Author edited</div>';
       } else {
         echo'<div class="alert alert-danger" role="alert">Error</div>';
