@@ -24,10 +24,6 @@
             <label for="aBirthdate<?php echo $author['author_id']; ?>" class="form-label" style="text-align: left;">Author Birthdate</label>
             <input type="date" class="form-control" id="aBirthdate<?php echo $author['author_id']; ?>" name="aBirthdate" value="<?php echo $author['author_birthdate'] ? htmlspecialchars($author['author_birthdate']) : ''; ?>">
           </div>
-          <div class="mb-3">
-            <label for="aAge<?php echo $author['author_id']; ?>" class="form-label" style="text-align: left;">Author Age</label>
-            <input type="number" class="form-control" id="aAge<?php echo $author['author_id']; ?>" name="aAge" value="<?php echo $author['author_age']; ?>" required>
-          </div>
           <input type="hidden" name="aid" value="<?php echo $author['author_id']; ?>">
           <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save Changes</button>
