@@ -50,7 +50,7 @@
           </div>    
           <div class="mb-3 text-start">
             <label for="publication_date<?php echo $genre['book_id']; ?>" class="form-label">Publication Date</label>
-            <input type="text" class="form-control" id="publication_date<?php echo $genre['book_id']; ?>" name="publication_date" value="<?php echo $genre['publication_date']; ?>">
+            <input type="date" class="form-control" id="publication_date<?php echo $genre['book_id']; ?>" name="publication_date" value="<?php echo $genre['publication_date']; ?>">
           </div>   
           <div class="mb-3 text-start">
             <label for="review<?php echo $genre['book_id']; ?>" class="form-label">Review</label>
