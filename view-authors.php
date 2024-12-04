@@ -12,7 +12,6 @@
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Birthdate</th>
-          <th scope="col">Age</th>
           <th scope="col">Edit</th>
           <th scope="col">Delete</th>
           <th scope="col">Genre</th>
@@ -23,7 +22,6 @@
           <tr>
             <td class="fw-bold"><?php echo htmlspecialchars($author["author_name"]); ?></td>
             <td><?php echo htmlspecialchars($author["author_birthdate"]); ?></td>
-            <td><?php echo htmlspecialchars($author["author_age"]); ?></td>
             <td>
               <?php include "view-authors-editform.php"; ?>
             </td>
