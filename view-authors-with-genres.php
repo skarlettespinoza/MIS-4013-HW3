@@ -11,8 +11,8 @@
   <div class="card-group flex-column w-100">
     <?php while ($author = $authors->fetch_assoc()) { ?>
       <!-- Author Card -->
-      <div class="card w-100 mb-4 shadow-sm border-0">
-        <div class="card-header">
+      <div class="card w-100 mb-4 shadow-sm border-0 rounded">
+        <div class="card-header rounded-top">
           <h4 class="mb-0"><?php echo htmlspecialchars($author["author_name"]); ?></h4>
         </div>
         <div class="card-body">
@@ -27,7 +27,7 @@
             while ($genre = $genres->fetch_assoc()) {
           ?>
               <!-- Book Card -->
-              <div class="card mb-3 border-0">
+              <div class="card mb-3 border-0 rounded">
                 <div class="card-body border rounded">
                   <p><strong>Genre:</strong> <?php echo htmlspecialchars($genre["genre"]); ?></p>
                   <p><strong>Title:</strong> <?php echo htmlspecialchars($genre["title"]); ?></p>
@@ -43,7 +43,7 @@
                     <form method="post" action="" class="d-inline-block">
                       <input type="hidden" name="bid" value="<?php echo htmlspecialchars($genre["book_id"]); ?>">
                       <input type="hidden" name="actionType" value="Delete">
-                      <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this book?');">
+                      <button type="submit" class="btn btn-sm btn-danger rounded" onclick="return confirm('Are you sure you want to delete this book?');">
                         <i class="bi bi-trash3"></i> Delete
                       </button>
                     </form>
@@ -108,6 +108,10 @@
   .btn-danger:hover {
     background-color: #c82333;
     border-color: #bd2130;
+  }
+
+  .btn-danger.rounded {
+    border-radius: 4px; /* Ensure delete button corners are rounded */
   }
 
   /* Responsive Adjustments */
