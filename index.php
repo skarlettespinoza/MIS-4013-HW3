@@ -55,9 +55,9 @@ include "view-footer.php";
     z-index: 2;
     max-width: 650px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: transparent; /* Remove white background */
+    /* border-radius: 10px; Optional: Keep if you still want rounded corners without the background */
+    box-shadow: none; /* Remove the box shadow */
   }
 
   .hero-text h2 {
