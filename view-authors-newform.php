@@ -24,10 +24,6 @@
             <label for="aBirthdate" class="form-label">Author Birthdate</label>
             <input type="date" class="form-control" id="aBirthdate" name="aBirthdate" required>
           </div>
-          <div class="mb-3">
-            <label for="aAge" class="form-label">Author Age</label>
-            <input type="number" class="form-control" id="aAge" name="aAge" required>
-          </div>
           <input type="hidden" name="actionType" value="Add">
           <button type="submit" class="btn" style="background-color: #f72f97; border-color: #f72f97; color: white;">Save</button>
         </form>
